@@ -12,6 +12,7 @@ import { minute } from '../../unit/common/time/minute';
 import { tropicalYear } from '../../unit/common/time/tropicalYear';
 import { week } from '../../unit/common/time/week';
 import { year } from '../../unit/common/time/year';
+import { fortnight } from '../../unit/imperial/fortnight';
 import { planckTime } from '../../unit/natural/planck/planckTime';
 import { second } from '../../unit/si/base/second';
 
@@ -23,6 +24,7 @@ export default ( {
   units: [
     day,
     hour,
+    fortnight,
     galacticYear,
     julianYear,
     minute,
