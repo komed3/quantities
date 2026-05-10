@@ -2,6 +2,7 @@ import type { QuantityDef, QuantityRef } from '../../../types/def/quantity';
 import { Branch, Format, Lang } from '../../../types/dict';
 import { TimeDim } from '../../../types/dimension';
 
+import { galacticYear } from '../../unit/astronomical/galacticYear';
 import { siderealDay } from '../../unit/astronomical/siderealDay';
 import { siderealYear } from '../../unit/astronomical/siderealYear';
 import { day } from '../../unit/common/time/day';
@@ -22,6 +23,7 @@ export default ( {
   units: [
     day,
     hour,
+    galacticYear,
     julianYear,
     minute,
     planckTime,
