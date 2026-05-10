@@ -23,8 +23,8 @@ export default ( {
     system: [
       UnitSystem.COMMON
     ],
-    si: UnitSIType.ACCEPTED,
-    status: UnitStatus.ACTIVE
+    status: UnitStatus.ACTIVE,
+    si: UnitSIType.ACCEPTED
   },
   meta: {
     symbol: [ {
