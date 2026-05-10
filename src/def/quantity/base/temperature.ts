@@ -5,6 +5,7 @@ import { TemperatureDim } from '../../../types/dimension';
 import { celsius } from '../../unit/common/temperature/celsius';
 import { delisle } from '../../unit/common/temperature/delisle';
 import { leiden } from '../../unit/common/temperature/leiden';
+import { newton } from '../../unit/common/temperature/newton';
 import { reaumur } from '../../unit/common/temperature/reaumur';
 import { romer } from '../../unit/common/temperature/romer';
 import { fahrenheit } from '../../unit/imperial/temperature/fahrenheit';
@@ -23,6 +24,7 @@ export default ( {
     fahrenheit,
     kelvin,
     leiden,
+    newton,
     planckTemperature,
     rankine,
     reaumur,
