@@ -36,6 +36,7 @@ export type UnitDef<
     system: UnitSystem[];
     status?: UnitStatus;
     dimensionless?: boolean;
+    constant?: boolean;
     si?: UnitSIType;
   };
   deprecated?: Deprecated< UnitRef< D > >;

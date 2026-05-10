@@ -10,6 +10,7 @@ import { julianYear } from '../../unit/common/time/julianYear';
 import { minute } from '../../unit/common/time/minute';
 import { week } from '../../unit/common/time/week';
 import { year } from '../../unit/common/time/year';
+import { planckTime } from '../../unit/natural/planck/planckTime';
 import { second } from '../../unit/si/base/second';
 
 export const time = 'time' as QuantityRef< TimeDim >;
@@ -22,6 +23,7 @@ export default ( {
     hour,
     julianYear,
     minute,
+    planckTime,
     second,
     siderealDay,
     siderealYear,
