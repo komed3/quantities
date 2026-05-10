@@ -1,0 +1,35 @@
+import type { QuantityDef, QuantityRef } from '../../../types/def/quantity';
+import { Branch, Format, Lang } from '../../../types/dict';
+import { TemperatureDim } from '../../../types/dimension';
+
+import { kelvin } from '../../unit/si/base/kelvin';
+
+export const temperature = 'temperature' as QuantityRef< TemperatureDim >;
+
+export default ( {
+  id: temperature,
+  dim: TemperatureDim,
+  units: [
+    kelvin
+  ],
+  baseUnit: kelvin,
+  branch: Branch.THERMODYNAMICS,
+  meta: {
+    symbol: [ {
+      id: 'T',
+      canonical: true,
+      format: {
+        [ Format.PLAIN ]: 'T',
+        [ Format.LATEX ]: 'T'
+      }
+    } ],
+    name: {
+      [ Lang.EN ]: 'thermodynamic temperature',
+      [ Lang.DE ]: 'Thermodynamische Temperatur'
+    },
+    description: {
+      [ Lang.EN ]: 'quantity expressing the average kinetic energy of the particles in a system',
+      [ Lang.DE ]: 'Größe, die die durchschnittliche kinetische Energie der Teilchen in einem System ausdrückt'
+    }
+  }
+} ) as const satisfies QuantityDef< TemperatureDim, typeof temperature >;
