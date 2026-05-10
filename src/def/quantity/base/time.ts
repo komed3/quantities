@@ -2,6 +2,7 @@ import type { QuantityDef, QuantityRef } from '../../../types/def/quantity';
 import { Branch, Format, Lang } from '../../../types/dict';
 import { TimeDim } from '../../../types/dimension';
 
+import { siderealDay } from '../../unit/astronomical/siderealDay';
 import { siderealYear } from '../../unit/astronomical/siderealYear';
 import { second } from '../../unit/si/base/second';
 
@@ -12,6 +13,7 @@ export default ( {
   dim: TimeDim,
   units: [
     second,
+    siderealDay,
     siderealYear
   ],
   baseUnit: second,

@@ -14,7 +14,7 @@ export default ( {
     base: second,
     factor: 3.155814954e7
   },
-  prefixable: true,
+  prefixable: false,
   aliases: [
     'sidereal year',
     'sidereal years',
