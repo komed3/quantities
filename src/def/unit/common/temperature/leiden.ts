@@ -50,7 +50,7 @@ export default ( {
       [ Lang.DE ]: [ 'Grad Leiden' ]
     },
     description: {
-      [ Lang.EN ]: 'historical temperature unit used in cryogenics for',
+      [ Lang.EN ]: 'historical temperature unit used in cryogenics',
       [ Lang.DE ]: 'historische Temperatureinheit, die in der Kryotechnik verwendet wird'
     }
   }
