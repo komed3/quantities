@@ -42,7 +42,7 @@ export default ( {
       }
     } ],
     name: {
-      [ Lang.EN ]: [ 'celsius' ],
+      [ Lang.EN ]: [ '°Celsius' ],
       [ Lang.DE ]: [ 'Grad Celsius' ]
     },
     description: {

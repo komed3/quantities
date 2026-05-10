@@ -46,7 +46,7 @@ export default ( {
       }
     } ],
     name: {
-      [ Lang.EN ]: [ 'réaumur' ],
+      [ Lang.EN ]: [ '°Réaumur' ],
       [ Lang.DE ]: [ 'Grad Réaumur' ]
     },
     description: {

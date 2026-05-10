@@ -47,7 +47,7 @@ export default ( {
       }
     } ],
     name: {
-      [ Lang.EN ]: [ 'rankine' ],
+      [ Lang.EN ]: [ '°Rankine' ],
       [ Lang.DE ]: [ 'Grad Rankine' ]
     },
     description: {

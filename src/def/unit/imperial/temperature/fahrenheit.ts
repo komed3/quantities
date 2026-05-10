@@ -41,7 +41,7 @@ export default ( {
       }
     } ],
     name: {
-      [ Lang.EN ]: [ 'fahrenheit' ],
+      [ Lang.EN ]: [ '°Fahrenheit' ],
       [ Lang.DE ]: [ 'Grad Fahrenheit' ]
     },
     description: {

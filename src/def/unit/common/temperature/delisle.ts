@@ -38,7 +38,7 @@ export default ( {
       }
     } ],
     name: {
-      [ Lang.EN ]: [ 'delisle' ],
+      [ Lang.EN ]: [ '°Delisle' ],
       [ Lang.DE ]: [ 'Grad Delisle' ]
     },
     description: {

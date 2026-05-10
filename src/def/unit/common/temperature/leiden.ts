@@ -46,7 +46,7 @@ export default ( {
       }
     } ],
     name: {
-      [ Lang.EN ]: [ 'leiden' ],
+      [ Lang.EN ]: [ '°Leiden' ],
       [ Lang.DE ]: [ 'Grad Leiden' ]
     },
     description: {

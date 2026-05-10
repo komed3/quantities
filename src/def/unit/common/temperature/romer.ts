@@ -40,7 +40,7 @@ export default ( {
       }
     } ],
     name: {
-      [ Lang.EN ]: [ 'rømer' ],
+      [ Lang.EN ]: [ '°Rømer' ],
       [ Lang.DE ]: [ 'Grad Rømer' ]
     },
     description: {

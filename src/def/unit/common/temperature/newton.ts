@@ -37,7 +37,7 @@ export default ( {
       }
     } ],
     name: {
-      [ Lang.EN ]: [ 'newton' ],
+      [ Lang.EN ]: [ '°Newton' ],
       [ Lang.DE ]: [ 'Grad Newton' ]
     },
     description: {
