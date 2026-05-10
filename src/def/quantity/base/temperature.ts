@@ -5,6 +5,7 @@ import { TemperatureDim } from '../../../types/dimension';
 import { celsius } from '../../unit/common/temperature/celsius';
 import { delisle } from '../../unit/common/temperature/delisle';
 import { leiden } from '../../unit/common/temperature/leiden';
+import { reaumur } from '../../unit/common/temperature/reaumur';
 import { romer } from '../../unit/common/temperature/romer';
 import { fahrenheit } from '../../unit/imperial/temperature/fahrenheit';
 import { rankine } from '../../unit/imperial/temperature/rankine';
@@ -22,6 +23,7 @@ export default ( {
     kelvin,
     leiden,
     rankine,
+    reaumur,
     romer
   ],
   baseUnit: kelvin,
