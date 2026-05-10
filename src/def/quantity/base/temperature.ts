@@ -4,6 +4,7 @@ import { TemperatureDim } from '../../../types/dimension';
 
 import { celsius } from '../../unit/common/temperature/celsius';
 import { fahrenheit } from '../../unit/imperial/temperature/fahrenheit';
+import { rankine } from '../../unit/imperial/temperature/rankine';
 import { kelvin } from '../../unit/si/base/kelvin';
 
 export const temperature = 'temperature' as QuantityRef< TemperatureDim >;
@@ -14,7 +15,8 @@ export default ( {
   units: [
     celsius,
     fahrenheit,
-    kelvin
+    kelvin,
+    rankine
   ],
   baseUnit: kelvin,
   branch: Branch.THERMODYNAMICS,
