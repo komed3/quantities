@@ -2,6 +2,7 @@ import type { QuantityDef, QuantityRef } from '../../../types/def/quantity';
 import { Branch, Format, Lang } from '../../../types/dict';
 import { TemperatureDim } from '../../../types/dimension';
 
+import { celsius } from '../../unit/common/temperature/celsius';
 import { kelvin } from '../../unit/si/base/kelvin';
 
 export const temperature = 'temperature' as QuantityRef< TemperatureDim >;
@@ -10,6 +11,7 @@ export default ( {
   id: temperature,
   dim: TemperatureDim,
   units: [
+    celsius,
     kelvin
   ],
   baseUnit: kelvin,
