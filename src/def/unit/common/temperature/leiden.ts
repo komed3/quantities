@@ -1,0 +1,57 @@
+import type { UnitDef, UnitRef } from '../../../../types/def/unit';
+import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { TemperatureDim } from '../../../../types/dimension';
+
+import { kelvin } from '../../si/base/kelvin';
+
+export const leiden = 'degL' as UnitRef< TemperatureDim, 'degL' >;
+
+export default ( {
+  id: leiden,
+  dim: TemperatureDim,
+  structure: [],
+  conversion: {
+    base: kelvin,
+    scale: 1,
+    offset: 20.15
+  },
+  prefixable: false,
+  aliases: [
+    '°L',
+    'DL',
+    'leiden',
+    'degree leiden',
+    'degrees leiden'
+  ],
+  context: {
+    system: [
+      UnitSystem.COMMON
+    ],
+    status: UnitStatus.HISTORICAL
+  },
+  meta: {
+    symbol: [ {
+      id: 'degL',
+      canonical: true,
+      format: {
+        [ Format.PLAIN ]: '°L',
+        [ Format.LATEX ]: '\\mathrm{^{\\circ}L}'
+      }
+    }, {
+      id: 'DL',
+      format: {
+        plain: 'DL',
+        unicode: 'ÐL',
+        latex: '\\mathrm{ÐL}'
+      }
+    } ],
+    name: {
+      [ Lang.EN ]: [ 'leiden' ],
+      [ Lang.DE ]: [ 'Grad Leiden' ]
+    },
+    description: {
+      [ Lang.EN ]: 'historical temperature unit used in cryogenics for',
+      [ Lang.DE ]: 'historische Temperatureinheit, die in der Kryotechnik verwendet wird'
+    }
+  }
+} ) as const satisfies UnitDef< TemperatureDim, typeof leiden >;
