@@ -3,6 +3,7 @@ export type Lang =
   | 'de';
 
 export type UnitSystem =
+  | 'common'
   | 'si'
   | 'cgs'
   | 'cgs_gaussian'
@@ -13,10 +14,10 @@ export type UnitSystem =
   | 'natural_atomic'
   | 'imperial'
   | 'usc'
-  | 'astronomical'
-  | 'common';
+  | 'astronomical';
 
 export type Branch =
+  | 'common'
   | 'mechanics'
   | 'acoustics'
   | 'electromagnetism'
