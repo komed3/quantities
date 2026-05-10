@@ -1,4 +1,5 @@
 import type { PrefixDef, PrefixRef } from '../../../types/def/prefix';
+import { Format, Lang } from '../../../types/dict';
 
 export const yocto = 'y' as PrefixRef< 'y' >;
 
@@ -11,17 +12,17 @@ export default ( {
       id: 'y',
       canonical: true,
       format: {
-        plain: 'y',
-        latex: '\\mathrm{y}'
+        [ Format.PLAIN ]: 'y',
+        [ Format.LATEX ]: '\\mathrm{y}'
       }
     } ],
     name: {
-      en: 'yocto',
-      de: 'Jokto'
+      [ Lang.EN ]: 'yocto',
+      [ Lang.DE ]: 'Jokto'
     },
     description: {
-      en: 'unit prefix with the factor 1e-24',
-      de: 'Einheitenpräfix mit dem Faktor 1e-24'
+      [ Lang.EN ]: 'unit prefix with the factor 1e-24',
+      [ Lang.DE ]: 'Einheitenpräfix mit dem Faktor 1e-24'
     }
   }
 } ) as const satisfies PrefixDef< typeof yocto >;

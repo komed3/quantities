@@ -1,4 +1,5 @@
 import type { PrefixDef, PrefixRef } from '../../../types/def/prefix';
+import { Format, Lang } from '../../../types/dict';
 
 export const exa = 'E' as PrefixRef< 'E' >;
 
@@ -11,17 +12,17 @@ export default ( {
       id: 'E',
       canonical: true,
       format: {
-        plain: 'E',
-        latex: '\\mathrm{E}'
+        [ Format.PLAIN ]: 'E',
+        [ Format.LATEX ]: '\\mathrm{E}'
       }
     } ],
     name: {
-      en: 'exa',
-      de: 'Exa'
+      [ Lang.EN ]: 'exa',
+      [ Lang.DE ]: 'Exa'
     },
     description: {
-      en: 'unit prefix with the factor 1e18',
-      de: 'Einheitenpräfix mit dem Faktor 1e18'
+      [ Lang.EN ]: 'unit prefix with the factor 1e18',
+      [ Lang.DE ]: 'Einheitenpräfix mit dem Faktor 1e18'
     }
   }
 } ) as const satisfies PrefixDef< typeof exa >;

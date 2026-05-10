@@ -1,4 +1,5 @@
 import type { PrefixDef, PrefixRef } from '../../../types/def/prefix';
+import { Format, Lang } from '../../../types/dict';
 
 export const pico = 'p' as PrefixRef< 'p' >;
 
@@ -11,17 +12,17 @@ export default ( {
       id: 'p',
       canonical: true,
       format: {
-        plain: 'p',
-        latex: '\\mathrm{p}'
+        [ Format.PLAIN ]: 'p',
+        [ Format.LATEX ]: '\\mathrm{p}'
       }
     } ],
     name: {
-      en: 'pico',
-      de: 'Piko'
+      [ Lang.EN ]: 'pico',
+      [ Lang.DE ]: 'Piko'
     },
     description: {
-      en: 'unit prefix with the factor 1e-12',
-      de: 'Einheitenpräfix mit dem Faktor 1e-12'
+      [ Lang.EN ]: 'unit prefix with the factor 1e-12',
+      [ Lang.DE ]: 'Einheitenpräfix mit dem Faktor 1e-12'
     }
   }
 } ) as const satisfies PrefixDef< typeof pico >;

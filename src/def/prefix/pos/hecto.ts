@@ -1,27 +1,28 @@
 import type { PrefixDef, PrefixRef } from '../../../types/def/prefix';
+import { Format, Lang } from '../../../types/dict';
 
 export const hecto = 'h' as PrefixRef< 'h' >;
 
 export default ( {
   id: hecto,
-  factor: 1e2,
+  factor: 100,
   aliases: [ 'hecto' ],
   meta: {
     symbol: [ {
       id: 'h',
       canonical: true,
       format: {
-        plain: 'h',
-        latex: '\\mathrm{h}'
+        [ Format.PLAIN ]: 'h',
+        [ Format.LATEX ]: '\\mathrm{h}'
       }
     } ],
     name: {
-      en: 'hecto',
-      de: 'Hekto'
+      [ Lang.EN ]: 'hecto',
+      [ Lang.DE ]: 'Hekto'
     },
     description: {
-      en: 'unit prefix with the factor 100',
-      de: 'Einheitenpräfix mit dem Faktor 100'
+      [ Lang.EN ]: 'unit prefix with the factor 100',
+      [ Lang.DE ]: 'Einheitenpräfix mit dem Faktor 100'
     }
   }
 } ) as const satisfies PrefixDef< typeof hecto >;

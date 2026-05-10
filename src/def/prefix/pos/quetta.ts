@@ -1,4 +1,5 @@
 import type { PrefixDef, PrefixRef } from '../../../types/def/prefix';
+import { Format, Lang } from '../../../types/dict';
 
 export const quetta = 'Q' as PrefixRef< 'Q' >;
 
@@ -11,17 +12,17 @@ export default ( {
       id: 'Q',
       canonical: true,
       format: {
-        plain: 'Q',
-        latex: '\\mathrm{Q}'
+        [ Format.PLAIN ]: 'Q',
+        [ Format.LATEX ]: '\\mathrm{Q}'
       }
     } ],
     name: {
-      en: 'quetta',
-      de: 'Quetta'
+      [ Lang.EN ]: 'quetta',
+      [ Lang.DE ]: 'Quetta'
     },
     description: {
-      en: 'unit prefix with the factor 1e30',
-      de: 'Einheitenpräfix mit dem Faktor 1e30'
+      [ Lang.EN ]: 'unit prefix with the factor 1e30',
+      [ Lang.DE ]: 'Einheitenpräfix mit dem Faktor 1e30'
     }
   }
 } ) as const satisfies PrefixDef< typeof quetta >;

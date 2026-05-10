@@ -1,4 +1,5 @@
 import type { PrefixDef, PrefixRef } from '../../../types/def/prefix';
+import { Format, Lang } from '../../../types/dict';
 
 export const femto = 'f' as PrefixRef< 'f' >;
 
@@ -11,17 +12,17 @@ export default ( {
       id: 'f',
       canonical: true,
       format: {
-        plain: 'f',
-        latex: '\\mathrm{f}'
+        [ Format.PLAIN ]: 'f',
+        [ Format.LATEX ]: '\\mathrm{f}'
       }
     } ],
     name: {
-      en: 'femto',
-      de: 'Femto'
+      [ Lang.EN ]: 'femto',
+      [ Lang.DE ]: 'Femto'
     },
     description: {
-      en: 'unit prefix with the factor 1e-15',
-      de: 'Einheitenpräfix mit dem Faktor 1e-15'
+      [ Lang.EN ]: 'unit prefix with the factor 1e-15',
+      [ Lang.DE ]: 'Einheitenpräfix mit dem Faktor 1e-15'
     }
   }
 } ) as const satisfies PrefixDef< typeof femto >;

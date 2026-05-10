@@ -1,4 +1,5 @@
 import type { PrefixDef, PrefixRef } from '../../../types/def/prefix';
+import { Format, Lang } from '../../../types/dict';
 
 export const tera = 'T' as PrefixRef< 'T' >;
 
@@ -11,17 +12,17 @@ export default ( {
       id: 'T',
       canonical: true,
       format: {
-        plain: 'T',
-        latex: '\\mathrm{T}'
+        [ Format.PLAIN ]: 'T',
+        [ Format.LATEX ]: '\\mathrm{T}'
       }
     } ],
     name: {
-      en: 'tera',
-      de: 'Tera'
+      [ Lang.EN ]: 'tera',
+      [ Lang.DE ]: 'Tera'
     },
     description: {
-      en: 'unit prefix with the factor 1e12',
-      de: 'Einheitenpräfix mit dem Faktor 1e12'
+      [ Lang.EN ]: 'unit prefix with the factor 1e12',
+      [ Lang.DE ]: 'Einheitenpräfix mit dem Faktor 1e12'
     }
   }
 } ) as const satisfies PrefixDef< typeof tera >;

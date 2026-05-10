@@ -1,4 +1,5 @@
 import type { PrefixDef, PrefixRef } from '../../../types/def/prefix';
+import { Format, Lang } from '../../../types/dict';
 
 export const micro = 'u' as PrefixRef< 'u' >;
 
@@ -11,18 +12,18 @@ export default ( {
       id: 'u',
       canonical: true,
       format: {
-        plain: 'u',
-        unicode: 'μ',
-        latex: '\\mu'
+        [ Format.PLAIN ]: 'u',
+        [ Format.UNICODE ]: 'μ',
+        [ Format.LATEX ]: '\\mu'
       }
     } ],
     name: {
-      en: 'micro',
-      de: 'Mikro'
+      [ Lang.EN ]: 'micro',
+      [ Lang.DE ]: 'Mikro'
     },
     description: {
-      en: 'unit prefix with the factor 1e-6',
-      de: 'Einheitenpräfix mit dem Faktor 1e-6'
+      [ Lang.EN ]: 'unit prefix with the factor 1e-6',
+      [ Lang.DE ]: 'Einheitenpräfix mit dem Faktor 1e-6'
     }
   }
 } ) as const satisfies PrefixDef< typeof micro >;

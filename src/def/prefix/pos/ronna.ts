@@ -1,4 +1,5 @@
 import type { PrefixDef, PrefixRef } from '../../../types/def/prefix';
+import { Format, Lang } from '../../../types/dict';
 
 export const ronna = 'R' as PrefixRef< 'R' >;
 
@@ -11,17 +12,17 @@ export default ( {
       id: 'R',
       canonical: true,
       format: {
-        plain: 'R',
-        latex: '\\mathrm{R}'
+        [ Format.PLAIN ]: 'R',
+        [ Format.LATEX ]: '\\mathrm{R}'
       }
     } ],
     name: {
-      en: 'ronna',
-      de: 'Ronna'
+      [ Lang.EN ]: 'ronna',
+      [ Lang.DE ]: 'Ronna'
     },
     description: {
-      en: 'unit prefix with the factor 1e27',
-      de: 'Einheitenpräfix mit dem Faktor 1e27'
+      [ Lang.EN ]: 'unit prefix with the factor 1e27',
+      [ Lang.DE ]: 'Einheitenpräfix mit dem Faktor 1e27'
     }
   }
 } ) as const satisfies PrefixDef< typeof ronna >;

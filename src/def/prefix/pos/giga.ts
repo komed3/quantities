@@ -1,4 +1,5 @@
 import type { PrefixDef, PrefixRef } from '../../../types/def/prefix';
+import { Format, Lang } from '../../../types/dict';
 
 export const giga = 'G' as PrefixRef< 'G' >;
 
@@ -11,17 +12,17 @@ export default ( {
       id: 'G',
       canonical: true,
       format: {
-        plain: 'G',
-        latex: '\\mathrm{G}'
+        [ Format.PLAIN ]: 'G',
+        [ Format.LATEX ]: '\\mathrm{G}'
       }
     } ],
     name: {
-      en: 'giga',
-      de: 'Giga'
+      [ Lang.EN ]: 'giga',
+      [ Lang.DE ]: 'Giga'
     },
     description: {
-      en: 'unit prefix with the factor 1e9',
-      de: 'Einheitenpräfix mit dem Faktor 1e9'
+      [ Lang.EN ]: 'unit prefix with the factor 1e9',
+      [ Lang.DE ]: 'Einheitenpräfix mit dem Faktor 1e9'
     }
   }
 } ) as const satisfies PrefixDef< typeof giga >;

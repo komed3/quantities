@@ -1,27 +1,28 @@
 import type { PrefixDef, PrefixRef } from '../../../types/def/prefix';
+import { Format, Lang } from '../../../types/dict';
 
 export const deca = 'da' as PrefixRef< 'da' >;
 
 export default ( {
   id: deca,
-  factor: 1e1,
+  factor: 10,
   aliases: [ 'deca' ],
   meta: {
     symbol: [ {
       id: 'da',
       canonical: true,
       format: {
-        plain: 'da',
-        latex: '\\mathrm{da}'
+        [ Format.PLAIN ]: 'da',
+        [ Format.LATEX ]: '\\mathrm{da}'
       }
     } ],
     name: {
-      en: 'deca',
-      de: 'Deka'
+      [ Lang.EN ]: 'deca',
+      [ Lang.DE ]: 'Deka'
     },
     description: {
-      en: 'unit prefix with the factor 10',
-      de: 'Einheitenpräfix mit dem Faktor 10'
+      [ Lang.EN ]: 'unit prefix with the factor 10',
+      [ Lang.DE ]: 'Einheitenpräfix mit dem Faktor 10'
     }
   }
 } ) as const satisfies PrefixDef< typeof deca >;

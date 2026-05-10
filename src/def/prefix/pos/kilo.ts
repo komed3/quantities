@@ -1,27 +1,28 @@
 import type { PrefixDef, PrefixRef } from '../../../types/def/prefix';
+import { Format, Lang } from '../../../types/dict';
 
 export const kilo = 'k' as PrefixRef< 'k' >;
 
 export default ( {
   id: kilo,
-  factor: 1e3,
+  factor: 1000,
   aliases: [ 'kilo' ],
   meta: {
     symbol: [ {
       id: 'k',
       canonical: true,
       format: {
-        plain: 'k',
-        latex: '\\mathrm{k}'
+        [ Format.PLAIN ]: 'k',
+        [ Format.LATEX ]: '\\mathrm{k}'
       }
     } ],
     name: {
-      en: 'kilo',
-      de: 'Kilo'
+      [ Lang.EN ]: 'kilo',
+      [ Lang.DE ]: 'Kilo'
     },
     description: {
-      en: 'unit prefix with the factor 1000',
-      de: 'Einheitenpräfix mit dem Faktor 1000'
+      [ Lang.EN ]: 'unit prefix with the factor 1000',
+      [ Lang.DE ]: 'Einheitenpräfix mit dem Faktor 1000'
     }
   }
 } ) as const satisfies PrefixDef< typeof kilo >;
