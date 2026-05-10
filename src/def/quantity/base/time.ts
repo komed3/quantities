@@ -3,6 +3,7 @@ import type { QuantityDef, QuantityRef } from '../../../types/def/quantity';
 import { Branch, Format, Lang } from '../../../types/dict';
 import { TimeDim } from '../../../types/dimension';
 
+import { siderealYear } from '../../unit/astronomical/siderealYear';
 import { second } from '../../unit/si/base/second';
 
 export const time = 'time' as QuantityRef< TimeDim >;
@@ -11,7 +12,8 @@ export default ( {
   id: time,
   dim: TimeDim,
   units: [
-    second
+    second,
+    siderealYear
   ],
   baseUnit: second,
   branch: Branch.COMMON,
