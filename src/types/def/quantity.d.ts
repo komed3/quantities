@@ -6,7 +6,7 @@ export type QuantityRef<
   D extends Dimension = Dimension,
   ID extends string = string
 > = ID & {
-  readonly __brand: 'quantityRef';
+  readonly __brand: 'quantity';
   readonly __dim: D;
 };
 
