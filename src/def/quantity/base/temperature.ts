@@ -9,6 +9,7 @@ import { reaumur } from '../../unit/common/temperature/reaumur';
 import { romer } from '../../unit/common/temperature/romer';
 import { fahrenheit } from '../../unit/imperial/temperature/fahrenheit';
 import { rankine } from '../../unit/imperial/temperature/rankine';
+import { planckTemperature } from '../../unit/natural/planck/planckTemperature';
 import { kelvin } from '../../unit/si/base/kelvin';
 
 export const temperature = 'temperature' as QuantityRef< TemperatureDim >;
@@ -22,6 +23,7 @@ export default ( {
     fahrenheit,
     kelvin,
     leiden,
+    planckTemperature,
     rankine,
     reaumur,
     romer
