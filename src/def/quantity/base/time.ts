@@ -1,13 +1,15 @@
-import type { TimeDim } from '../../../types/dimension';
 import type { QuantityDef, QuantityRef } from '../../../types/def/quantity';
+import { TimeDim } from '../../../types/dimension';
+
+import { second } from '../../unit/si/base/second';
 
 export const time = 'time' as QuantityRef< TimeDim >;
 
 export default ( {
   id: time,
-  dim: [ 1, 0, 0, 0, 0, 0, 0 ],
-  units: [],
-  baseUnit: undefined,
+  dim: TimeDim,
+  units: [ second ],
+  baseUnit: second,
   branch: 'common',
   meta: {
     symbol: [ {
