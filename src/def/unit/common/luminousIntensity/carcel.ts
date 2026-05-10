@@ -39,8 +39,8 @@ export default ( {
       [ Lang.DE ]: [ 'Carcel' ]
     },
     description: {
-      [ Lang.EN ]: 'unit of luminous intensity used in the 19th century, equal to approx. 9.74 candelas',
-      [ Lang.DE ]: 'Lichtstärkeeineinheit, die im 19. Jahrhundert verwendet wurde und ca. 9,74 Candela entspricht'
+      [ Lang.EN ]: 'historical unit of luminous intensity used in the 19th century, equal to approx. 9.74 candelas',
+      [ Lang.DE ]: 'historische Lichtstärkeeineinheit, die im 19. Jahrhundert verwendet wurde und ca. 9,74 Candela entspricht'
     }
   }
 } ) as const satisfies UnitDef< LuminousIntensityDim, typeof carcel >;
