@@ -24,7 +24,8 @@ export default ( {
       UnitSystem.NATURAL,
       UnitSystem.ATOMIC
     ],
-    status: UnitStatus.ACTIVE
+    status: UnitStatus.ACTIVE,
+    constant: true
   },
   meta: {
     symbol: [ {
