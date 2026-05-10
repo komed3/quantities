@@ -1,4 +1,4 @@
-import type { Deprecated, Meta } from './common';
+import type { Deprecated, Meta } from '../common';
 
 export type PrefixRef< ID extends string = string > = ID & {
   readonly __brand: 'prefix';

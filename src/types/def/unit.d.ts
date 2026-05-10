@@ -1,5 +1,5 @@
-import type { Deprecated, Meta, UnitSystem } from './common';
-import type { Dimension } from './dimension';
+import type { Deprecated, Meta, UnitSystem } from '../common';
+import type { Dimension } from '../dimension';
 import type { PrefixRef } from './prefix';
 
 export type UnitRef<

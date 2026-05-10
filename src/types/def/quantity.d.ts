@@ -1,5 +1,5 @@
-import type { Branch, Deprecated, Meta } from './common';
-import type { Dimension } from './dimension';
+import type { Branch, Deprecated, Meta } from '../common';
+import type { Dimension } from '../dimension';
 import type { UnitRef } from './unit';
 
 export type QuantityRef<
