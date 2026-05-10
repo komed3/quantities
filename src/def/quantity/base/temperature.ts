@@ -3,6 +3,7 @@ import { Branch, Format, Lang } from '../../../types/dict';
 import { TemperatureDim } from '../../../types/dimension';
 
 import { celsius } from '../../unit/common/temperature/celsius';
+import { fahrenheit } from '../../unit/imperial/temperature/fahrenheit';
 import { kelvin } from '../../unit/si/base/kelvin';
 
 export const temperature = 'temperature' as QuantityRef< TemperatureDim >;
@@ -12,6 +13,7 @@ export default ( {
   dim: TemperatureDim,
   units: [
     celsius,
+    fahrenheit,
     kelvin
   ],
   baseUnit: kelvin,

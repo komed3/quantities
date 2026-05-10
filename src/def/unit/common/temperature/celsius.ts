@@ -1,6 +1,7 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
 import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
 import { TemperatureDim } from '../../../../types/dimension';
+
 import { kelvin } from '../../si/base/kelvin';
 
 export const celsius = 'degC' as UnitRef< TemperatureDim, 'degC' >;
@@ -16,6 +17,7 @@ export default ( {
   },
   prefixable: false,
   aliases: [
+    '°C',
     'celsius',
     'degree celsius',
     'degrees celsius',
