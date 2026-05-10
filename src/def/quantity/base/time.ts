@@ -13,6 +13,7 @@ import { tropicalYear } from '../../unit/common/time/tropicalYear';
 import { week } from '../../unit/common/time/week';
 import { year } from '../../unit/common/time/year';
 import { fortnight } from '../../unit/imperial/fortnight';
+import { atomicTime } from '../../unit/natural/atomic/atomicTime';
 import { planckTime } from '../../unit/natural/planck/planckTime';
 import { second } from '../../unit/si/base/second';
 
@@ -22,6 +23,7 @@ export default ( {
   id: time,
   dim: TimeDim,
   units: [
+    atomicTime,
     day,
     hour,
     fortnight,
