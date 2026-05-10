@@ -6,14 +6,14 @@ export const micro = 'u' as PrefixRef< 'u' >;
 export default ( {
   id: micro,
   factor: 1e-6,
-  aliases: [ 'μ', 'micro', 'mc' ],
+  aliases: [ 'µ', 'micro', 'mc' ],
   meta: {
     symbol: [ {
       id: 'u',
       canonical: true,
       format: {
         [ Format.PLAIN ]: 'u',
-        [ Format.UNICODE ]: 'μ',
+        [ Format.UNICODE ]: 'µ',
         [ Format.LATEX ]: '\\mu'
       }
     } ],
