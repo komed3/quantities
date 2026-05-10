@@ -42,7 +42,7 @@ export default ( {
     },
     description: {
       [ Lang.EN ]: 'astronomical unit of time, time of one Earth rotation around its axis',
-      [ Lang.DE ]: 'astromonische Einheit der Zeit, Zeit einer Erdrotation um die eigene Achse'
+      [ Lang.DE ]: 'astronomische Einheit der Zeit, Zeit einer Erdrotation um die eigene Achse'
     }
   }
 } ) as const satisfies UnitDef< TimeDim, typeof siderealDay >;

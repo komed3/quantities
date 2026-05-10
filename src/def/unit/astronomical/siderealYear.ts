@@ -48,7 +48,7 @@ export default ( {
     },
     description: {
       [ Lang.EN ]: 'astronomical unit of time, time of one Earth orbit around the Sun',
-      [ Lang.DE ]: 'astromonische Einheit der Zeit, Zeit eines Erdumlaufs um die Sonne'
+      [ Lang.DE ]: 'astronomische Einheit der Zeit, Zeit eines Erdumlaufs um die Sonne'
     }
   }
 } ) as const satisfies UnitDef< TimeDim, typeof siderealYear >;
