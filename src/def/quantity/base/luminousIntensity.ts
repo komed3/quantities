@@ -3,6 +3,8 @@ import { Branch, Format, Lang } from '../../../types/dict';
 import { LuminousIntensityDim } from '../../../types/dimension';
 
 import { carcel } from '../../unit/common/luminousIntensity/carcel';
+import { hefnerLamp } from '../../unit/common/luminousIntensity/hefnerLamp';
+import { candlepower } from '../../unit/imperial/luminousIntensity/candlepower';
 import { candela } from '../../unit/si/base/candela';
 
 export const luminousIntensity = 'luminousIntensity' as QuantityRef< LuminousIntensityDim >;
@@ -12,7 +14,9 @@ export default ( {
   dim: LuminousIntensityDim,
   units: [
     candela,
-    carcel
+    candlepower,
+    carcel,
+    hefnerLamp
   ],
   baseUnit: candela,
   branch: Branch.COMMON,
