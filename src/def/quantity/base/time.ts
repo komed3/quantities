@@ -1,5 +1,4 @@
 import type { QuantityDef, QuantityRef } from '../../../types/def/quantity';
-
 import { Branch, Format, Lang } from '../../../types/dict';
 import { TimeDim } from '../../../types/dimension';
 
