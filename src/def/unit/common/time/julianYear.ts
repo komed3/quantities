@@ -4,7 +4,7 @@ import { TimeDim } from '../../../../types/dimension';
 
 import { second } from '../../si/base/second';
 
-export const julianYear = 'julianYear' as UnitRef< TimeDim, 'julianYear' >;
+export const julianYear = 'aJul' as UnitRef< TimeDim, 'aJul' >;
 
 export default ( {
   id: julianYear,
@@ -16,6 +16,7 @@ export default ( {
   },
   prefixable: false,
   aliases: [
+    'julian year',
     'julian years'
   ],
   context: {

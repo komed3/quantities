@@ -8,6 +8,7 @@ import { day } from '../../unit/common/time/day';
 import { hour } from '../../unit/common/time/hour';
 import { julianYear } from '../../unit/common/time/julianYear';
 import { minute } from '../../unit/common/time/minute';
+import { tropicalYear } from '../../unit/common/time/tropicalYear';
 import { week } from '../../unit/common/time/week';
 import { year } from '../../unit/common/time/year';
 import { planckTime } from '../../unit/natural/planck/planckTime';
@@ -27,6 +28,7 @@ export default ( {
     second,
     siderealDay,
     siderealYear,
+    tropicalYear,
     week,
     year
   ],
