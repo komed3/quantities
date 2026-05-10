@@ -1,4 +1,6 @@
 import type { QuantityDef, QuantityRef } from '../../../types/def/quantity';
+
+import { Branch } from '../../../types/common';
 import { TimeDim } from '../../../types/dimension';
 
 import { second } from '../../unit/si/base/second';
@@ -8,9 +10,11 @@ export const time = 'time' as QuantityRef< TimeDim >;
 export default ( {
   id: time,
   dim: TimeDim,
-  units: [ second ],
+  units: [
+    second
+  ],
   baseUnit: second,
-  branch: 'common',
+  branch: Branch.COMMON,
   meta: {
     symbol: [ {
       id: 't',

@@ -1,4 +1,6 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
+
+import { UnitSystem } from '../../../../types/common';
 import { TimeDim } from '../../../../types/dimension';
 
 export const second = 's' as UnitRef< TimeDim, 's' >;
@@ -9,9 +11,16 @@ export default ( {
   structure: [],
   conversion: 1,
   prefixable: true,
-  aliases: [ 'second', 'seconds', 'sec' ],
+  aliases: [
+    'second',
+    'seconds',
+    'sec'
+  ],
   context: {
-    system: [ 'common', 'si' ],
+    system: [
+      UnitSystem.COMMON,
+      UnitSystem.SI
+    ],
     status: 'active',
     si: 'base'
   },

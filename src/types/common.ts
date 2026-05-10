@@ -1,28 +1,31 @@
-export type Lang =
-  | 'en'
-  | 'de';
+export enum Lang {
+  EN = 'en',
+  DE = 'de'
+}
 
-export type UnitSystem =
-  | 'common'
-  | 'si'
-  | 'cgs'
-  | 'cgs_gaussian'
-  | 'cgs_emu'
-  | 'cgs_esu'
-  | 'natural'
-  | 'natural_planck'
-  | 'natural_atomic'
-  | 'imperial'
-  | 'usc'
-  | 'astronomical';
+export enum UnitSystem {
+  COMMON = 'common',
+  SI = 'si',
+  CGS = 'cgs',
+  GAUSSIAN = 'cgs_gaussian',
+  EMU = 'cgs_emu',
+  ESU = 'cgs_esu',
+  NATURAL = 'natural',
+  PLANCK = 'natural_planck',
+  ATOMIC = 'natural_atomic',
+  IMPERIAL = 'imperial',
+  USC = 'usc',
+  ASTRO = 'astronomical'
+}
 
-export type Branch =
-  | 'common'
-  | 'mechanics'
-  | 'acoustics'
-  | 'electromagnetism'
-  | 'optics'
-  | 'thermodynamics';
+export enum Branch {
+  COMMON = 'common',
+  MECHANICS = 'mechanics',
+  ACOUSTICS = 'acoustics',
+  ELECTROMAGNETISM = 'electromagnetism',
+  OPTICS = 'optics',
+  THERMODYNAMICS = 'thermodynamics'
+}
 
 export type LangGroup< T = unknown > = { [ L in Lang ]?: T };
 
