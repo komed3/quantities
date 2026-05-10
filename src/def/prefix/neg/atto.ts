@@ -1,4 +1,4 @@
-import type { PrefixDef, PrefixRef } from '../../../types/prefix';
+import type { PrefixDef, PrefixRef } from '../../../types/def/prefix';
 
 export const atto = 'a' as PrefixRef< 'a' >;
 
