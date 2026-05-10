@@ -16,6 +16,13 @@ export type UnitSystem =
   | 'astronomical'
   | 'common';
 
+export type Branch =
+  | 'mechanics'
+  | 'acoustics'
+  | 'electromagnetism'
+  | 'optics'
+  | 'thermodynamics';
+
 export type LangGroup< T = unknown > = { [ L in Lang ]?: T };
 
 export type Symbol = {
