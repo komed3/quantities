@@ -4,6 +4,10 @@ import { TimeDim } from '../../../types/dimension';
 
 import { siderealDay } from '../../unit/astronomical/siderealDay';
 import { siderealYear } from '../../unit/astronomical/siderealYear';
+import { day } from '../../unit/common/time/day';
+import { hour } from '../../unit/common/time/hour';
+import { minute } from '../../unit/common/time/minute';
+import { week } from '../../unit/common/time/week';
 import { second } from '../../unit/si/base/second';
 
 export const time = 'time' as QuantityRef< TimeDim >;
@@ -12,9 +16,13 @@ export default ( {
   id: time,
   dim: TimeDim,
   units: [
+    day,
+    hour,
+    minute,
     second,
     siderealDay,
-    siderealYear
+    siderealYear,
+    week
   ],
   baseUnit: second,
   branch: Branch.COMMON,
