@@ -1,4 +1,5 @@
-import type { Deprecated, Meta, UnitSystem } from '../common';
+import type { Deprecated, Meta } from '../common';
+import type { UnitSIType, UnitStatus, UnitSystem } from '../dict';
 import type { Dimension } from '../dimension';
 import type { PrefixRef } from './prefix';
 
@@ -9,16 +10,6 @@ export type UnitRef<
   readonly __brand: 'unit';
   readonly __dim: D;
 };
-
-export type UnitSIType =
-  | 'base'
-  | 'derived'
-  | 'accepted';
-
-export type UnitStatus =
-  | 'active'
-  | 'historical'
-  | 'obsolete';
 
 export type UnitStruct = Array< {
   unit: UnitRef;

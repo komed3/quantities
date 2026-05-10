@@ -1,31 +1,4 @@
-export enum Lang {
-  EN = 'en',
-  DE = 'de'
-}
-
-export enum UnitSystem {
-  COMMON = 'common',
-  SI = 'si',
-  CGS = 'cgs',
-  GAUSSIAN = 'cgs_gaussian',
-  EMU = 'cgs_emu',
-  ESU = 'cgs_esu',
-  NATURAL = 'natural',
-  PLANCK = 'natural_planck',
-  ATOMIC = 'natural_atomic',
-  IMPERIAL = 'imperial',
-  USC = 'usc',
-  ASTRO = 'astronomical'
-}
-
-export enum Branch {
-  COMMON = 'common',
-  MECHANICS = 'mechanics',
-  ACOUSTICS = 'acoustics',
-  ELECTROMAGNETISM = 'electromagnetism',
-  OPTICS = 'optics',
-  THERMODYNAMICS = 'thermodynamics'
-}
+import type { Lang, UnitSystem } from './dict';
 
 export type LangGroup< T = unknown > = { [ L in Lang ]?: T };
 
