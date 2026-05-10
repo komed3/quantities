@@ -1,6 +1,6 @@
 import type { QuantityDef, QuantityRef } from '../../../types/def/quantity';
 
-import { Branch, Lang } from '../../../types/dict';
+import { Branch, Format, Lang } from '../../../types/dict';
 import { TimeDim } from '../../../types/dimension';
 
 import { second } from '../../unit/si/base/second';
@@ -20,8 +20,8 @@ export default ( {
       id: 't',
       canonical: true,
       format: {
-        plain: 't',
-        latex: 't'
+        [ Format.PLAIN ]: 't',
+        [ Format.LATEX ]: 't'
       }
     } ],
     name: {

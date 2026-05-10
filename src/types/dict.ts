@@ -3,6 +3,12 @@ export enum Lang {
   DE = 'de'
 }
 
+export enum Format {
+  PLAIN = 'plain',
+  UNICODE = 'unicode',
+  LATEX = 'latex'
+}
+
 export enum UnitSystem {
   COMMON = 'common',
   SI = 'si',

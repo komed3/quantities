@@ -1,6 +1,11 @@
-import type { Lang, UnitSystem } from './dict';
+import type { Format, Lang, UnitSystem } from './dict';
 
-export type LangGroup< T = unknown > = { [ L in Lang ]?: T };
+export type LangGroup< T = unknown > =
+  { [ L in Lang ]?: T };
+
+export type FormatGroup< T = unknown > =
+  { [ F in Format.PLAIN ]: T } &
+  { [ F in Exclude< Format, Format.PLAIN > ]?: T };
 
 export type Symbol = {
   readonly id: string;
@@ -10,11 +15,7 @@ export type Symbol = {
     system?: UnitSystem[];
     lang?: Lang;
   };
-  format: {
-    plain: string;
-    unicode?: string;
-    latex?: string;
-  };
+  format: FormatGroup< string >;
 };
 
 export type Name = string | readonly [

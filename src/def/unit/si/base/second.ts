@@ -1,6 +1,6 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
 
-import { Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
 import { TimeDim } from '../../../../types/dimension';
 
 export const second = 's' as UnitRef< TimeDim, 's' >;
@@ -29,8 +29,8 @@ export default ( {
       id: 's',
       canonical: true,
       format: {
-        plain: 's',
-        latex: '\\mathrm{s}'
+        [ Format.PLAIN ]: 's',
+        [ Format.LATEX ]: '\\mathrm{s}'
       }
     } ],
     name: {
