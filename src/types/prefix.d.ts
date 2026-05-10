@@ -1,7 +1,7 @@
 import type { Deprecated, Meta } from './common';
 
 export type PrefixRef< ID extends string = string > = ID & {
-  readonly __brand: 'prefixRef';
+  readonly __brand: 'prefix';
 };
 
 export type PrefixDef< R extends PrefixRef = PrefixRef > = {
