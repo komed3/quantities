@@ -18,9 +18,9 @@ export default ( {
   prefixable: false,
   aliases: [
     '°F',
-    'fahrenheit',
     'degree fahrenheit',
-    'degrees fahrenheit'
+    'degrees fahrenheit',
+    'fahrenheit'
   ],
   context: {
     system: [

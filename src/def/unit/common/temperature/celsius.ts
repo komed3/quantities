@@ -18,9 +18,9 @@ export default ( {
   prefixable: false,
   aliases: [
     '°C',
-    'celsius',
     'degree celsius',
     'degrees celsius',
+    'celsius',
     'centigrade'
   ],
   context: {

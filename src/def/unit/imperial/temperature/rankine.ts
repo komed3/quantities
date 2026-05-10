@@ -18,9 +18,9 @@ export default ( {
   prefixable: false,
   aliases: [
     '°Ra',
-    'rankine',
     'degree rankine',
-    'degrees rankine'
+    'degrees rankine',
+    'rankine'
   ],
   context: {
     system: [

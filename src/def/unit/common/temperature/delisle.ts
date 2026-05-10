@@ -18,9 +18,9 @@ export default ( {
   prefixable: false,
   aliases: [
     '°De',
-    'delisle',
     'degree delisle',
-    'degrees delisle'
+    'degrees delisle',
+    'delisle'
   ],
   context: {
     system: [

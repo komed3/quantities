@@ -19,9 +19,9 @@ export default ( {
   aliases: [
     '°L',
     'DL',
-    'leiden',
     'degree leiden',
-    'degrees leiden'
+    'degrees leiden',
+    'leiden'
   ],
   context: {
     system: [
