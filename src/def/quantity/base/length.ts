@@ -25,6 +25,7 @@ import { yard } from '../../unit/imperial/length/yard';
 import { bohrRadius } from '../../unit/natural/atomic/bohrRadius';
 import { xunit } from '../../unit/natural/atomic/xunit';
 import { planckLength } from '../../unit/natural/planck/planckLength';
+import { stoneyLength } from '../../unit/natural/stoney/stoneyLength';
 import { meter } from '../../unit/si/base/meter';
 
 export const length = 'length' as QuantityRef< LengthDim >;
@@ -54,6 +55,7 @@ export default ( {
     planckLength,
     rod,
     solarRadius,
+    stoneyLength,
     thou,
     xunit,
     yard

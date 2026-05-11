@@ -17,6 +17,7 @@ import { year } from '../../unit/common/time/year';
 import { fortnight } from '../../unit/imperial/time/fortnight';
 import { atomicTime } from '../../unit/natural/atomic/atomicTime';
 import { planckTime } from '../../unit/natural/planck/planckTime';
+import { stoneyTime } from '../../unit/natural/stoney/stoneyTime';
 import { second } from '../../unit/si/base/second';
 
 export const time = 'time' as QuantityRef< TimeDim >;
@@ -37,6 +38,7 @@ export default ( {
     shake,
     siderealDay,
     siderealYear,
+    stoneyTime,
     svedberg,
     tropicalYear,
     week,

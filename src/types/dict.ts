@@ -19,6 +19,7 @@ export enum UnitSystem {
   NATURAL = 'natural',
   PLANCK = 'natural_planck',
   ATOMIC = 'natural_atomic',
+  STONEY = 'natural_stoney',
   IMPERIAL = 'imperial',
   USC = 'usc',
   ASTRO = 'astronomical'
