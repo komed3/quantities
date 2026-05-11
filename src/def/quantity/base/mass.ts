@@ -3,6 +3,8 @@ import { Branch, Format, Lang } from '../../../types/dict';
 import { MassDim } from '../../../types/dimension';
 
 import { ton } from '../../unit/common/mass/ton';
+import { longTon } from '../../unit/imperial/mass/longTon';
+import { shortTon } from '../../unit/imperial/mass/shortTon';
 import { gram } from '../../unit/si/base/gram';
 
 export const mass = 'mass' as QuantityRef< MassDim >;
@@ -12,6 +14,8 @@ export default ( {
   dim: MassDim,
   units: [
     gram,
+    longTon,
+    shortTon,
     ton
   ],
   baseUnit: gram,

@@ -16,6 +16,7 @@ export default ( {
   },
   prefixable: true,
   aliases: [
+    'ton',
     'tons',
     'metric ton',
     'metric tons'
