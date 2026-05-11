@@ -9,6 +9,8 @@ import { ton } from '../../unit/common/mass/ton';
 import { longCwt } from '../../unit/imperial/mass/longCwt';
 import { longTon } from '../../unit/imperial/mass/longTon';
 import { pound } from '../../unit/imperial/mass/pound';
+import { troyOunce } from '../../unit/imperial/mass/troyOunce';
+import { troyPound } from '../../unit/imperial/mass/troyPound';
 import { atomicMass } from '../../unit/natural/atomic/atomicMass';
 import { planckMass } from '../../unit/natural/planck/planckMass';
 import { gram } from '../../unit/si/base/gram';
@@ -32,7 +34,9 @@ export default ( {
     shortCwt,
     shortTon,
     solarMass,
-    ton
+    ton,
+    troyOunce,
+    troyPound
   ],
   baseUnit: gram,
   branch: Branch.COMMON,
