@@ -2,6 +2,8 @@ import type { QuantityDef, QuantityRef } from '../../../types/def/quantity';
 import { Branch, Format, Lang } from '../../../types/dict';
 import { MassDim } from '../../../types/dimension';
 
+import { earthMass } from '../../unit/astronomical/mass/earthMass';
+import { solarMass } from '../../unit/astronomical/mass/solarMass';
 import { ton } from '../../unit/common/mass/ton';
 import { longTon } from '../../unit/imperial/mass/longTon';
 import { shortTon } from '../../unit/imperial/mass/shortTon';
@@ -16,10 +18,12 @@ export default ( {
   dim: MassDim,
   units: [
     atomicMass,
+    earthMass,
     gram,
     longTon,
     planckMass,
     shortTon,
+    solarMass,
     ton
   ],
   baseUnit: gram,
