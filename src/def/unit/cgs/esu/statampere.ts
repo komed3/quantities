@@ -22,7 +22,8 @@ export default ( {
   context: {
     system: [
       UnitSystem.CGS,
-      UnitSystem.ESU
+      UnitSystem.ESU,
+      UnitSystem.GAUSSIAN
     ],
     status: UnitStatus.ACTIVE
   },
