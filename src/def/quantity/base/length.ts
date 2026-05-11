@@ -3,7 +3,9 @@ import { Branch, Format, Lang } from '../../../types/dict';
 import { LengthDim } from '../../../types/dimension';
 
 import { astronomicalUnit } from '../../unit/astronomical/length/astronomicalUnit';
+import { earthRadius } from '../../unit/astronomical/length/earthRadius';
 import { lightYear } from '../../unit/astronomical/length/lightYear';
+import { nominalEarthRadius } from '../../unit/astronomical/length/nominalEarthRadius';
 import { parsec } from '../../unit/astronomical/length/parsec';
 import { solarRadius } from '../../unit/astronomical/length/solarRadius';
 import { planckLength } from '../../unit/natural/planck/planckLength';
@@ -16,8 +18,10 @@ export default ( {
   dim: LengthDim,
   units: [
     astronomicalUnit,
+    earthRadius,
     lightYear,
     meter,
+    nominalEarthRadius,
     parsec,
     planckLength,
     solarRadius
