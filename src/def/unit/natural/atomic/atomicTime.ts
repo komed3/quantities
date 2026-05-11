@@ -36,13 +36,22 @@ export default ( {
         [ Format.LATEX ]: '\\mathrm{a.u.\\,of\\,time}'
       }
     }, {
-      id: 'formula',
+      id: 'auZeit',
+      context: {
+        lang: Lang.DE
+      },
+      format: {
+        [ Format.PLAIN ]: 'a.u. Zeit',
+        [ Format.LATEX ]: '\\mathrm{a.u.\\,Zeit}'
+      }
+    } ],
+    formula: {
       format: {
         [ Format.PLAIN ]: 'h/Eh',
         [ Format.UNICODE ]: 'ℏ/Eₕ',
         [ Format.LATEX ]: '\\hbar/E_{\\mathrm{h}}'
       }
-    } ],
+    },
     name: {
       [ Lang.EN ]: [ 'atomic time', 'atomic times' ],
       [ Lang.DE ]: [ 'atomare Zeiteinheit', 'atomare Zeiteinheiten' ]

@@ -36,13 +36,22 @@ export default ( {
         [ Format.LATEX ]: '\\mathrm{a.u.\\,of\\,current}'
       }
     }, {
-      id: 'formula',
+      id: 'auStrom',
+      context: {
+        lang: Lang.DE
+      },
       format: {
-        [ Format.PLAIN ]: 'eEh/h',
-        [ Format.UNICODE ]: 'eEₕ/ℏ',
-        [ Format.LATEX ]: 'eE_{\\mathrm{h}}/\\hbar'
+        [ Format.PLAIN ]: 'a.u. Strom',
+        [ Format.LATEX ]: '\\mathrm{a.u.\\,Strom}'
       }
     } ],
+    formula: {
+      format: {
+        [ Format.PLAIN ]: 'e*Eh/h',
+        [ Format.UNICODE ]: 'e·Eₕ/ℏ',
+        [ Format.LATEX ]: 'eE_{\\mathrm{h}}/\\hbar'
+      }
+    },
     name: {
       [ Lang.EN ]: [ 'atomic current', 'atomic current' ],
       [ Lang.DE ]: [ 'atomare Stromeinheit', 'atomare Stromeinheiten' ]
