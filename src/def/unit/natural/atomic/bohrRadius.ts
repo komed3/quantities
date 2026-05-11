@@ -12,7 +12,8 @@ export default ( {
   structure: [],
   conversion: {
     base: meter,
-    factor: 5.2917721054482e-11
+    factor: 5.2917721054482e-11,
+    uncertainty: 1.6e-10
   },
   prefixable: false,
   aliases: [
