@@ -8,6 +8,7 @@ import { carat } from '../../unit/common/mass/carat';
 import { ton } from '../../unit/common/mass/ton';
 import { longCwt } from '../../unit/imperial/mass/longCwt';
 import { longTon } from '../../unit/imperial/mass/longTon';
+import { pound } from '../../unit/imperial/mass/pound';
 import { atomicMass } from '../../unit/natural/atomic/atomicMass';
 import { planckMass } from '../../unit/natural/planck/planckMass';
 import { gram } from '../../unit/si/base/gram';
@@ -27,6 +28,7 @@ export default ( {
     longCwt,
     longTon,
     planckMass,
+    pound,
     shortCwt,
     shortTon,
     solarMass,
