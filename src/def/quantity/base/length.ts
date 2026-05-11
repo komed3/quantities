@@ -4,6 +4,7 @@ import { LengthDim } from '../../../types/dimension';
 
 import { astronomicalUnit } from '../../unit/astronomical/length/astronomicalUnit';
 import { earthRadius } from '../../unit/astronomical/length/earthRadius';
+import { lightSecond } from '../../unit/astronomical/length/lightSecond';
 import { lightYear } from '../../unit/astronomical/length/lightYear';
 import { nominalEarthRadius } from '../../unit/astronomical/length/nominalEarthRadius';
 import { parsec } from '../../unit/astronomical/length/parsec';
@@ -19,6 +20,7 @@ export default ( {
   units: [
     astronomicalUnit,
     earthRadius,
+    lightSecond,
     lightYear,
     meter,
     nominalEarthRadius,
