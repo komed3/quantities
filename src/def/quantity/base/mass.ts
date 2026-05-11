@@ -6,10 +6,10 @@ import { earthMass } from '../../unit/astronomical/mass/earthMass';
 import { solarMass } from '../../unit/astronomical/mass/solarMass';
 import { ton } from '../../unit/common/mass/ton';
 import { longTon } from '../../unit/imperial/mass/longTon';
-import { shortTon } from '../../unit/imperial/mass/shortTon';
 import { atomicMass } from '../../unit/natural/atomic/atomicMass';
 import { planckMass } from '../../unit/natural/planck/planckMass';
 import { gram } from '../../unit/si/base/gram';
+import { shortTon } from '../../unit/usc/mass/shortTon';
 
 export const mass = 'mass' as QuantityRef< MassDim >;
 
