@@ -1,14 +1,17 @@
 import type { QuantityDef, QuantityRef } from '../../../types/def/quantity';
 import { Branch, Format, Lang } from '../../../types/dict';
 import { MassDim } from '../../../types/dimension';
+import { gram } from '../../unit/si/base/gram';
 
 export const mass = 'mass' as QuantityRef< MassDim >;
 
 export default ( {
   id: mass,
-  dim: LengthDim,
-  units: [],
-  baseUnit: undefined,
+  dim: MassDim,
+  units: [
+    gram
+  ],
+  baseUnit: gram,
   branch: Branch.COMMON,
   meta: {
     symbol: [ {
