@@ -1,0 +1,48 @@
+import type { UnitDef, UnitRef } from '../../../../types/def/unit';
+import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { MassDim } from '../../../../types/dimension';
+
+import { gram } from '../../si/base/gram';
+
+export const ton = 't' as UnitRef< MassDim, 't' >;
+
+export default ( {
+  id: ton,
+  dim: MassDim,
+  structure: [],
+  conversion: {
+    base: gram,
+    factor: 1e6
+  },
+  prefixable: true,
+  aliases: [
+    'tons',
+    'metric ton',
+    'metric tons'
+  ],
+  context: {
+    system: [
+      UnitSystem.COMMON
+    ],
+    status: UnitStatus.ACTIVE,
+    si: UnitSIType.ACCEPTED
+  },
+  meta: {
+    symbol: [ {
+      id: 't',
+      canonical: true,
+      format: {
+        [ Format.PLAIN ]: 't',
+        [ Format.LATEX ]: '\\mathrm{t}'
+      }
+    } ],
+    name: {
+      [ Lang.EN ]: [ 'metric ton', 'metric tons' ],
+      [ Lang.DE ]: [ 'Tonne', 'Tonnen' ]
+    },
+    description: {
+      [ Lang.EN ]: 'accepted metric unit of mass equal to 1,000 kilograms',
+      [ Lang.DE ]: 'akzeptierte metrische Masseneinheit, die 1.000 kg entspricht'
+    }
+  }
+} ) as const satisfies UnitDef< MassDim, typeof ton >;
