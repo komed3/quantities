@@ -24,7 +24,6 @@ export default ( {
   ],
   context: {
     system: [
-      UnitSystem.COMMON,
       UnitSystem.IMPERIAL,
       UnitSystem.USC
     ],
