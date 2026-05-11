@@ -14,7 +14,7 @@ export default ( {
     base: gram,
     factor: 1.016046908e6
   },
-  prefixable: true,
+  prefixable: false,
   aliases: [
     'long ton',
     'long tons',

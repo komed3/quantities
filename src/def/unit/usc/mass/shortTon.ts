@@ -14,7 +14,7 @@ export default ( {
     base: gram,
     factor: 0.90718474
   },
-  prefixable: true,
+  prefixable: false,
   aliases: [
     'short ton',
     'short tons',
