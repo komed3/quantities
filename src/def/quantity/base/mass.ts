@@ -5,10 +5,12 @@ import { MassDim } from '../../../types/dimension';
 import { earthMass } from '../../unit/astronomical/mass/earthMass';
 import { solarMass } from '../../unit/astronomical/mass/solarMass';
 import { ton } from '../../unit/common/mass/ton';
+import { longCwt } from '../../unit/imperial/mass/longCwt';
 import { longTon } from '../../unit/imperial/mass/longTon';
 import { atomicMass } from '../../unit/natural/atomic/atomicMass';
 import { planckMass } from '../../unit/natural/planck/planckMass';
 import { gram } from '../../unit/si/base/gram';
+import { shortCwt } from '../../unit/usc/mass/shortCwt';
 import { shortTon } from '../../unit/usc/mass/shortTon';
 
 export const mass = 'mass' as QuantityRef< MassDim >;
@@ -20,8 +22,10 @@ export default ( {
     atomicMass,
     earthMass,
     gram,
+    longCwt,
     longTon,
     planckMass,
+    shortCwt,
     shortTon,
     solarMass,
     ton
