@@ -23,6 +23,7 @@ import { rod } from '../../unit/imperial/length/rod';
 import { thou } from '../../unit/imperial/length/thou';
 import { yard } from '../../unit/imperial/length/yard';
 import { bohrRadius } from '../../unit/natural/atomic/bohrRadius';
+import { qcdLength } from '../../unit/natural/atomic/qcdLength';
 import { xunit } from '../../unit/natural/atomic/xunit';
 import { planckLength } from '../../unit/natural/planck/planckLength';
 import { stoneyLength } from '../../unit/natural/stoney/stoneyLength';
@@ -53,6 +54,7 @@ export default ( {
     nominalEarthRadius,
     parsec,
     planckLength,
+    qcdLength,
     rod,
     solarRadius,
     stoneyLength,
