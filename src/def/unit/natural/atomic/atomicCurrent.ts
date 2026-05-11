@@ -38,9 +38,9 @@ export default ( {
     }, {
       id: 'formula',
       format: {
-        [ Format.PLAIN ]: 'e/a0^3',
-        [ Format.UNICODE ]: 'e/a₀³',
-        [ Format.LATEX ]: 'e/a_{0}^{3}'
+        [ Format.PLAIN ]: 'eEh/h',
+        [ Format.UNICODE ]: 'eEₕ/ℏ',
+        [ Format.LATEX ]: 'eE_{\\mathrm{h}}/\\hbar'
       }
     } ],
     name: {

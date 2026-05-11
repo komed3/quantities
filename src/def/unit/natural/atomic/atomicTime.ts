@@ -39,7 +39,7 @@ export default ( {
       id: 'formula',
       format: {
         [ Format.PLAIN ]: 'h/Eh',
-        [ Format.UNICODE ]: 'h/Eₕ',
+        [ Format.UNICODE ]: 'ℏ/Eₕ',
         [ Format.LATEX ]: '\\hbar/E_{\\mathrm{h}}'
       }
     } ],
