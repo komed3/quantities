@@ -4,7 +4,7 @@ import { MassDim } from '../../../../types/dimension';
 
 import { gram } from '../../si/base/gram';
 
-export const pound = 'lb' as UnitRef< MassDim, 'lb' >;  
+export const pound = 'lb' as UnitRef< MassDim, 'lb' >;
 
 export default ( {
   id: pound,
@@ -39,7 +39,7 @@ export default ( {
     } ],
     name: {
       [ Lang.EN ]: [ 'pound', 'pounds' ],
-      [ Lang.DE ]: [ 'Pfund', 'Pfund' ]
+      [ Lang.DE ]: [ 'Pfund' ]
     },
     description: {
       [ Lang.EN ]: 'imperial unit of mass, equal to 0.45359237 kilograms',
