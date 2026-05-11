@@ -22,6 +22,7 @@ import { mile } from '../../unit/imperial/length/mile';
 import { rod } from '../../unit/imperial/length/rod';
 import { thou } from '../../unit/imperial/length/thou';
 import { yard } from '../../unit/imperial/length/yard';
+import { xunit } from '../../unit/natural/atomic/xunit';
 import { planckLength } from '../../unit/natural/planck/planckLength';
 import { meter } from '../../unit/si/base/meter';
 
@@ -52,6 +53,7 @@ export default ( {
     rod,
     solarRadius,
     thou,
+    xunit,
     yard
   ],
   baseUnit: meter,
