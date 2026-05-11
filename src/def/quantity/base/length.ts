@@ -13,6 +13,9 @@ import { solarRadius } from '../../unit/astronomical/length/solarRadius';
 import { angstrom } from '../../unit/common/length/angstrom';
 import { foot } from '../../unit/imperial/length/foot';
 import { inch } from '../../unit/imperial/length/inch';
+import { mile } from '../../unit/imperial/length/mile';
+import { nauticalMile } from '../../unit/imperial/length/nauticalMile';
+import { thou } from '../../unit/imperial/length/thou';
 import { yard } from '../../unit/imperial/length/yard';
 import { planckLength } from '../../unit/natural/planck/planckLength';
 import { meter } from '../../unit/si/base/meter';
@@ -32,10 +35,13 @@ export default ( {
     lightYear,
     lunarDistance,
     meter,
+    mile,
+    nauticalMile,
     nominalEarthRadius,
     parsec,
     planckLength,
     solarRadius,
+    thou,
     yard
   ],
   baseUnit: meter,

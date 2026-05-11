@@ -4,20 +4,22 @@ import { LengthDim } from '../../../../types/dimension';
 
 import { meter } from '../../si/base/meter';
 
-export const yard = 'yd' as UnitRef< LengthDim, 'yd' >;
+export const mile = 'mi' as UnitRef< LengthDim, 'mi' >;
 
 export default ( {
-  id: yard,
+  id: mile,
   dim: LengthDim,
   structure: [],
   conversion: {
     base: meter,
-    factor: 0.9144
+    factor: 1.609344e3
   },
   prefixable: false,
   aliases: [
-    'yard',
-    'yards'
+    'mile',
+    'miles',
+    'statute mile',
+    'statute miles'
   ],
   context: {
     system: [
@@ -28,20 +30,20 @@ export default ( {
   },
   meta: {
     symbol: [ {
-      id: 'yd',
+      id: 'mi',
       canonical: true,
       format: {
-        [ Format.PLAIN ]: 'yd',
-        [ Format.LATEX ]: '\\mathrm{yd}'
+        [ Format.PLAIN ]: 'mi',
+        [ Format.LATEX ]: '\\mathrm{mi}'
       }
     } ],
     name: {
-      [ Lang.EN ]: [ 'yard', 'yards' ],
-      [ Lang.DE ]: [ 'Yard', 'Yards' ]
+      [ Lang.EN ]: [ 'mile', 'miles' ],
+      [ Lang.DE ]: [ 'Meile', 'Meilen' ]
     },
     description: {
-      [ Lang.EN ]: 'imperial unit of length equal to 3 feet or 0.9144 meters',
-      [ Lang.DE ]: 'imperiale Längeneinheit, die 3 Fuß oder 0,9144 Meter entspricht'
+      [ Lang.EN ]: 'imperial unit of length equal to 1,760 yards or 1,609.344 meters',
+      [ Lang.DE ]: 'imperiale Längeneinheit, die 1.760 Yards oder 1.609,344 Meter entspricht'
     }
   }
-} ) as const satisfies UnitDef< LengthDim, typeof yard >;
+} ) as const satisfies UnitDef< LengthDim, typeof mile >;
