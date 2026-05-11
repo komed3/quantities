@@ -5,6 +5,7 @@ import { LengthDim } from '../../../types/dimension';
 import { astronomicalUnit } from '../../unit/astronomical/length/astronomicalUnit';
 import { lightYear } from '../../unit/astronomical/length/lightYear';
 import { parsec } from '../../unit/astronomical/length/parsec';
+import { solarRadius } from '../../unit/astronomical/length/solarRadius';
 import { planckLength } from '../../unit/natural/planck/planckLength';
 import { meter } from '../../unit/si/base/meter';
 
@@ -18,7 +19,8 @@ export default ( {
     lightYear,
     meter,
     parsec,
-    planckLength
+    planckLength,
+    solarRadius
   ],
   baseUnit: meter,
   branch: Branch.COMMON,
