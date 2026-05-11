@@ -6,9 +6,11 @@ import { earthMass } from '../../unit/astronomical/mass/earthMass';
 import { solarMass } from '../../unit/astronomical/mass/solarMass';
 import { carat } from '../../unit/common/mass/carat';
 import { ton } from '../../unit/common/mass/ton';
+import { grain } from '../../unit/imperial/mass/grain';
 import { longCwt } from '../../unit/imperial/mass/longCwt';
 import { longTon } from '../../unit/imperial/mass/longTon';
 import { ounce } from '../../unit/imperial/mass/ounce';
+import { pennyweight } from '../../unit/imperial/mass/pennyweight';
 import { pound } from '../../unit/imperial/mass/pound';
 import { troyOunce } from '../../unit/imperial/mass/troyOunce';
 import { troyPound } from '../../unit/imperial/mass/troyPound';
@@ -27,10 +29,12 @@ export default ( {
     atomicMass,
     carat,
     earthMass,
+    grain,
     gram,
     longCwt,
     longTon,
     ounce,
+    pennyweight,
     planckMass,
     pound,
     shortCwt,
