@@ -5,6 +5,7 @@ import { MassDim } from '../../../types/dimension';
 import { ton } from '../../unit/common/mass/ton';
 import { longTon } from '../../unit/imperial/mass/longTon';
 import { shortTon } from '../../unit/imperial/mass/shortTon';
+import { planckMass } from '../../unit/natural/planck/planckMass';
 import { gram } from '../../unit/si/base/gram';
 
 export const mass = 'mass' as QuantityRef< MassDim >;
@@ -15,6 +16,7 @@ export default ( {
   units: [
     gram,
     longTon,
+    planckMass,
     shortTon,
     ton
   ],
