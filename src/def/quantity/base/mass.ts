@@ -4,6 +4,7 @@ import { MassDim } from '../../../types/dimension';
 
 import { earthMass } from '../../unit/astronomical/mass/earthMass';
 import { solarMass } from '../../unit/astronomical/mass/solarMass';
+import { carat } from '../../unit/common/mass/carat';
 import { ton } from '../../unit/common/mass/ton';
 import { longCwt } from '../../unit/imperial/mass/longCwt';
 import { longTon } from '../../unit/imperial/mass/longTon';
@@ -20,6 +21,7 @@ export default ( {
   dim: MassDim,
   units: [
     atomicMass,
+    carat,
     earthMass,
     gram,
     longCwt,
