@@ -11,10 +11,11 @@ import { nominalEarthRadius } from '../../unit/astronomical/length/nominalEarthR
 import { parsec } from '../../unit/astronomical/length/parsec';
 import { solarRadius } from '../../unit/astronomical/length/solarRadius';
 import { angstrom } from '../../unit/common/length/angstrom';
+import { cable } from '../../unit/common/length/cable';
+import { nauticalMile } from '../../unit/common/length/nauticalMile';
 import { foot } from '../../unit/imperial/length/foot';
 import { inch } from '../../unit/imperial/length/inch';
 import { mile } from '../../unit/imperial/length/mile';
-import { nauticalMile } from '../../unit/imperial/length/nauticalMile';
 import { thou } from '../../unit/imperial/length/thou';
 import { yard } from '../../unit/imperial/length/yard';
 import { planckLength } from '../../unit/natural/planck/planckLength';
@@ -28,6 +29,7 @@ export default ( {
   units: [
     angstrom,
     astronomicalUnit,
+    cable,
     earthRadius,
     foot,
     inch,

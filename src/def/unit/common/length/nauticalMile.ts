@@ -12,7 +12,7 @@ export default ( {
   structure: [],
   conversion: {
     base: meter,
-    factor: 1.852e3
+    factor: 1852
   },
   prefixable: false,
   aliases: [
@@ -22,8 +22,7 @@ export default ( {
   ],
   context: {
     system: [
-      UnitSystem.IMPERIAL,
-      UnitSystem.USC
+      UnitSystem.COMMON
     ],
     status: UnitStatus.ACTIVE
   },
@@ -70,8 +69,8 @@ export default ( {
       [ Lang.DE ]: [ 'Seemeile', 'Seemeilen' ]
     },
     description: {
-      [ Lang.EN ]: 'imperial unit of length equal to 1,852 meters or approximately 1.15078 miles',
-      [ Lang.DE ]: 'imperiale Längeneinheit, die 1.852 Meter oder ungefähr 1,15078 Meilen entspricht'
+      [ Lang.EN ]: 'nautical unit of length equal to 1,852 meters or approximately 1.15078 miles',
+      [ Lang.DE ]: 'nautische Längeneinheit, die 1.852 Meter oder ungefähr 1,15078 Meilen entspricht'
     }
   }
 } ) as const satisfies UnitDef< LengthDim, typeof nauticalMile >;
