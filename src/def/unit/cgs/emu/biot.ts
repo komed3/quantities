@@ -27,7 +27,7 @@ export default ( {
       UnitSystem.CGS,
       UnitSystem.EMU
     ],
-    status: UnitStatus.ACTIVE
+    status: UnitStatus.HISTORICAL
   },
   meta: {
     symbol: [ {

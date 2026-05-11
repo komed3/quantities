@@ -25,7 +25,7 @@ export default ( {
       UnitSystem.ESU,
       UnitSystem.GAUSSIAN
     ],
-    status: UnitStatus.ACTIVE
+    status: UnitStatus.HISTORICAL
   },
   meta: {
     symbol: [ {
