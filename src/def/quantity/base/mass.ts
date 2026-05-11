@@ -5,6 +5,7 @@ import { MassDim } from '../../../types/dimension';
 import { ton } from '../../unit/common/mass/ton';
 import { longTon } from '../../unit/imperial/mass/longTon';
 import { shortTon } from '../../unit/imperial/mass/shortTon';
+import { atomicMass } from '../../unit/natural/atomic/atomicMass';
 import { planckMass } from '../../unit/natural/planck/planckMass';
 import { gram } from '../../unit/si/base/gram';
 
@@ -14,6 +15,7 @@ export default ( {
   id: mass,
   dim: MassDim,
   units: [
+    atomicMass,
     gram,
     longTon,
     planckMass,
