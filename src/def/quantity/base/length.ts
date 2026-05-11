@@ -2,6 +2,8 @@ import type { QuantityDef, QuantityRef } from '../../../types/def/quantity';
 import { Branch, Format, Lang } from '../../../types/dict';
 import { LengthDim } from '../../../types/dimension';
 
+import { astronomicalUnit } from '../../unit/astronomical/length/astronomicalUnit';
+import { lightYear } from '../../unit/astronomical/length/lightYear';
 import { planckLength } from '../../unit/natural/planck/planckLength';
 import { meter } from '../../unit/si/base/meter';
 
@@ -11,6 +13,8 @@ export default ( {
   id: length,
   dim: LengthDim,
   units: [
+    astronomicalUnit,
+    lightYear,
     meter,
     planckLength
   ],
