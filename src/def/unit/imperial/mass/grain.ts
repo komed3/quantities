@@ -37,7 +37,7 @@ export default ( {
     } ],
     name: {
       [ Lang.EN ]: [ 'grain', 'grains' ],
-      [ Lang.DE ]: [ 'Grain', 'Grains' ]
+      [ Lang.DE ]: [ 'Gran' ]
     },
     description: {
       [ Lang.EN ]: 'imperial unit of mass, equal to 1/7000 of a pound (approx. 64.8 mg)',

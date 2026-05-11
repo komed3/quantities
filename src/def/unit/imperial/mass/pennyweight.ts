@@ -37,7 +37,7 @@ export default ( {
     } ],
     name: {
       [ Lang.EN ]: [ 'pennyweight', 'pennyweights' ],
-      [ Lang.DE ]: [ 'Pennyweight', 'Pennyweights' ]
+      [ Lang.DE ]: [ 'Pfenniggewicht', 'Pfenniggewichte' ]
     },
     description: {
       [ Lang.EN ]: 'imperial unit of mass, equal to 24 grains or 1/20 of an ounce (approx. 1.555 g)',

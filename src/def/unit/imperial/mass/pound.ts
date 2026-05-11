@@ -36,6 +36,12 @@ export default ( {
         [ Format.UNICODE ]: '℔',
         [ Format.LATEX ]: '\\mathrm{lb}'
       }
+    }, {
+      id: 'pd',
+      format: {
+        [ Format.PLAIN ]: 'pd',
+        [ Format.LATEX ]: '\\mathrm{pd}'
+      }
     } ],
     name: {
       [ Lang.EN ]: [ 'pound', 'pounds' ],
