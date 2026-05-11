@@ -47,7 +47,7 @@ export default ( {
     } ],
     formula: {
       format: {
-        [ Format.PLAIN ]: 'h/Eh',
+        [ Format.PLAIN ]: 'hBar/Eh',
         [ Format.UNICODE ]: 'ℏ/Eₕ',
         [ Format.LATEX ]: '\\hbar/E_{\\mathrm{h}}'
       }
