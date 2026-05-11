@@ -17,7 +17,9 @@ import { chain } from '../../unit/imperial/length/chain';
 import { foot } from '../../unit/imperial/length/foot';
 import { furlong } from '../../unit/imperial/length/furlong';
 import { inch } from '../../unit/imperial/length/inch';
+import { link } from '../../unit/imperial/length/link';
 import { mile } from '../../unit/imperial/length/mile';
+import { rod } from '../../unit/imperial/length/rod';
 import { thou } from '../../unit/imperial/length/thou';
 import { yard } from '../../unit/imperial/length/yard';
 import { planckLength } from '../../unit/natural/planck/planckLength';
@@ -39,6 +41,7 @@ export default ( {
     inch,
     lightSecond,
     lightYear,
+    link,
     lunarDistance,
     meter,
     mile,
@@ -46,6 +49,7 @@ export default ( {
     nominalEarthRadius,
     parsec,
     planckLength,
+    rod,
     solarRadius,
     thou,
     yard
