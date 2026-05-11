@@ -6,6 +6,7 @@ import { astronomicalUnit } from '../../unit/astronomical/length/astronomicalUni
 import { earthRadius } from '../../unit/astronomical/length/earthRadius';
 import { lightSecond } from '../../unit/astronomical/length/lightSecond';
 import { lightYear } from '../../unit/astronomical/length/lightYear';
+import { lunarDistance } from '../../unit/astronomical/length/lunarDistance';
 import { nominalEarthRadius } from '../../unit/astronomical/length/nominalEarthRadius';
 import { parsec } from '../../unit/astronomical/length/parsec';
 import { solarRadius } from '../../unit/astronomical/length/solarRadius';
@@ -22,6 +23,7 @@ export default ( {
     earthRadius,
     lightSecond,
     lightYear,
+    lunarDistance,
     meter,
     nominalEarthRadius,
     parsec,
