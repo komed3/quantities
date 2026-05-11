@@ -23,6 +23,7 @@ import { rod } from '../../unit/imperial/length/rod';
 import { thou } from '../../unit/imperial/length/thou';
 import { yard } from '../../unit/imperial/length/yard';
 import { bohrRadius } from '../../unit/natural/atomic/bohrRadius';
+import { electronRadius } from '../../unit/natural/atomic/electronRadius';
 import { qcdLength } from '../../unit/natural/atomic/qcdLength';
 import { xunit } from '../../unit/natural/atomic/xunit';
 import { planckLength } from '../../unit/natural/planck/planckLength';
@@ -41,6 +42,7 @@ export default ( {
     cable,
     chain,
     earthRadius,
+    electronRadius,
     foot,
     furlong,
     inch,
