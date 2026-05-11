@@ -13,7 +13,9 @@ import { solarRadius } from '../../unit/astronomical/length/solarRadius';
 import { angstrom } from '../../unit/common/length/angstrom';
 import { cable } from '../../unit/common/length/cable';
 import { nauticalMile } from '../../unit/common/length/nauticalMile';
+import { chain } from '../../unit/imperial/length/chain';
 import { foot } from '../../unit/imperial/length/foot';
+import { furlong } from '../../unit/imperial/length/furlong';
 import { inch } from '../../unit/imperial/length/inch';
 import { mile } from '../../unit/imperial/length/mile';
 import { thou } from '../../unit/imperial/length/thou';
@@ -30,8 +32,10 @@ export default ( {
     angstrom,
     astronomicalUnit,
     cable,
+    chain,
     earthRadius,
     foot,
+    furlong,
     inch,
     lightSecond,
     lightYear,
