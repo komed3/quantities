@@ -2,6 +2,7 @@ import type { QuantityDef, QuantityRef } from '../../../types/def/quantity';
 import { Branch, Format, Lang } from '../../../types/dict';
 import { LengthDim } from '../../../types/dimension';
 
+import { planckLength } from '../../unit/natural/planck/planckLength';
 import { meter } from '../../unit/si/base/meter';
 
 export const length = 'length' as QuantityRef< LengthDim >;
@@ -10,7 +11,8 @@ export default ( {
   id: length,
   dim: LengthDim,
   units: [
-    meter
+    meter,
+    planckLength
   ],
   baseUnit: meter,
   branch: Branch.COMMON,
