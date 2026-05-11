@@ -18,12 +18,17 @@ export type Symbol = {
   format: FormatGroup< string >;
 };
 
+export type Formula = {
+  format: FormatGroup< string >;
+};
+
 export type Name = string | readonly [
   singular: string, plural?: string
 ];
 
 export type Meta = {
   symbol: Symbol[];
+  formula?: Formula;
   name?: LangGroup< Name >;
   description?: LangGroup< string >;
 };
