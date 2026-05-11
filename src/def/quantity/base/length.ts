@@ -10,6 +10,7 @@ import { lunarDistance } from '../../unit/astronomical/length/lunarDistance';
 import { nominalEarthRadius } from '../../unit/astronomical/length/nominalEarthRadius';
 import { parsec } from '../../unit/astronomical/length/parsec';
 import { solarRadius } from '../../unit/astronomical/length/solarRadius';
+import { angstrom } from '../../unit/common/length/angstrom';
 import { planckLength } from '../../unit/natural/planck/planckLength';
 import { meter } from '../../unit/si/base/meter';
 
@@ -19,6 +20,7 @@ export default ( {
   id: length,
   dim: LengthDim,
   units: [
+    angstrom,
     astronomicalUnit,
     earthRadius,
     lightSecond,
