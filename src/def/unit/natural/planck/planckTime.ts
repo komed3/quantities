@@ -38,6 +38,13 @@ export default ( {
         [ Format.LATEX ]: 't_{\\mathrm{P}}'
       }
     } ],
+    formula: {
+      format: {
+        [ Format.PLAIN ]: 'sqrt(h*G/c^5)',
+        [ Format.UNICODE ]: '√(ħ·G/c⁵)',
+        [ Format.LATEX ]: '\\sqrt{\\frac{\\hbar\\,G}{c^{5}}}'
+      }
+    },
     name: {
       [ Lang.EN ]: [ 'planck time', 'planck times' ],
       [ Lang.DE ]: [ 'Planck-Zeit', 'Planck-Zeiten' ]

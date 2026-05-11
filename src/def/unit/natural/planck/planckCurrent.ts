@@ -37,6 +37,13 @@ export default ( {
         [ Format.LATEX ]: 'I_{\\mathrm{P}}'
       }
     } ],
+    formula: {
+      format: {
+        [ Format.PLAIN ]: 'sqrt(c^6*4*pi*epsilon0/G)',
+        [ Format.UNICODE ]: '√(c⁶·4π·ε₀/G)',
+        [ Format.LATEX ]: '\\sqrt{\\frac{c^{6}4\\pi\\varepsilon_{0}}{G}}'
+      }
+    },
     name: {
       [ Lang.EN ]: [ 'planck current', 'planck currents' ],
       [ Lang.DE ]: [ 'Planck-Strom', 'Planck-Ströme' ]

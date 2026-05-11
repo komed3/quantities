@@ -38,6 +38,13 @@ export default ( {
         [ Format.LATEX ]: 'T_{\\mathrm{P}}'
       }
     } ],
+    formula: {
+      format: {
+        [ Format.PLAIN ]: 'mP*c^2/kB',
+        [ Format.UNICODE ]: 'mₚ·c²/kB',
+        [ Format.LATEX ]: '\\frac{m_{\\mathrm{P}}\\,c^{2}}{k_{\\mathrm{B}}}'
+      }
+    },
     name: {
       [ Lang.EN ]: [ 'planck temperature', 'planck temperatures' ],
       [ Lang.DE ]: [ 'Planck-Temperatur', 'Planck-Temperaturen' ]
