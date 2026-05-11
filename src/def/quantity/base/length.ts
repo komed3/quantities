@@ -11,6 +11,9 @@ import { nominalEarthRadius } from '../../unit/astronomical/length/nominalEarthR
 import { parsec } from '../../unit/astronomical/length/parsec';
 import { solarRadius } from '../../unit/astronomical/length/solarRadius';
 import { angstrom } from '../../unit/common/length/angstrom';
+import { foot } from '../../unit/imperial/length/foot';
+import { inch } from '../../unit/imperial/length/inch';
+import { yard } from '../../unit/imperial/length/yard';
 import { planckLength } from '../../unit/natural/planck/planckLength';
 import { meter } from '../../unit/si/base/meter';
 
@@ -23,6 +26,8 @@ export default ( {
     angstrom,
     astronomicalUnit,
     earthRadius,
+    foot,
+    inch,
     lightSecond,
     lightYear,
     lunarDistance,
@@ -30,7 +35,8 @@ export default ( {
     nominalEarthRadius,
     parsec,
     planckLength,
-    solarRadius
+    solarRadius,
+    yard
   ],
   baseUnit: meter,
   branch: Branch.COMMON,
