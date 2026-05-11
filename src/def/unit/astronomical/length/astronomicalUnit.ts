@@ -53,7 +53,7 @@ export default ( {
     } ],
     name: {
       [ Lang.EN ]: [ 'astronomical unit', 'astronomical units' ],
-      [ Lang.DE ]: [ 'astronomische Einheit', 'astronomische Einheiten' ]
+      [ Lang.DE ]: [ 'Astronomische Einheit', 'Astronomische Einheiten' ]
     },
     description: {
       [ Lang.EN ]: 'astronomical unit of length equivalent to the average distance between the Earth and the Sun',
