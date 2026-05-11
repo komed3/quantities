@@ -44,6 +44,13 @@ export default ( {
         [ Format.LATEX ]: 'r_{\\mathrm{Bohr}}'
       }
     } ],
+    formula: {
+      format: {
+        [ Format.PLAIN ]: '(4*pi*epsilon0*hBar^2)/(e^2*me)',
+        [ Format.UNICODE ]: '(4·π·ε₀·ℏ²)/(e²·mₑ)',
+        [ Format.LATEX ]: '\\frac{4\\pi\\epsilon_{0}\\hbar^{2}}{e^{2}m_{e}}'
+      }
+    },
     name: {
       [ Lang.EN ]: [ 'bohr radius', 'bohr radii' ],
       [ Lang.DE ]: [ 'Bohrscher Radius', 'Bohrsche Radien' ]

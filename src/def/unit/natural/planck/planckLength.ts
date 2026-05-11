@@ -40,7 +40,7 @@ export default ( {
     } ],
     formula: {
       format: {
-        [ Format.PLAIN ]: 'sqrt(h*G/c^3)',
+        [ Format.PLAIN ]: 'sqrt(hBar*G/c^3)',
         [ Format.UNICODE ]: '√(ħ·G/c³)',
         [ Format.LATEX ]: '\\sqrt{\\frac{\\hbar\\,G}{c^{3}}}'
       }

@@ -39,7 +39,7 @@ export default ( {
     } ],
     formula: {
       format: {
-        [ Format.PLAIN ]: 'sqrt(G*e^2/(4*π*ε0*c^6))',
+        [ Format.PLAIN ]: 'sqrt(G*e^2/(4*pi*epsilon0*c^6))',
         [ Format.UNICODE ]: '√(G·e²/(4π·ε₀·c⁶))',
         [ Format.LATEX ]: '\\sqrt{\\frac{Ge^{2}}{4\\pi\\epsilon_{0}c^{6}}}'
       }

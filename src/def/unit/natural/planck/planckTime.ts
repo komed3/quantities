@@ -40,7 +40,7 @@ export default ( {
     } ],
     formula: {
       format: {
-        [ Format.PLAIN ]: 'sqrt(h*G/c^5)',
+        [ Format.PLAIN ]: 'sqrt(hBar*G/c^5)',
         [ Format.UNICODE ]: '√(ħ·G/c⁵)',
         [ Format.LATEX ]: '\\sqrt{\\frac{\\hbar\\,G}{c^{5}}}'
       }
