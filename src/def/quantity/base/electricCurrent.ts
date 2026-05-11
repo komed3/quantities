@@ -2,6 +2,10 @@ import type { QuantityDef, QuantityRef } from '../../../types/def/quantity';
 import { Branch, Format, Lang } from '../../../types/dict';
 import { ElectricCurrentDim } from '../../../types/dimension';
 
+import { biot } from '../../unit/cgs/emu/biot';
+import { statampere } from '../../unit/cgs/esu/statampere';
+import { atomicCurrent } from '../../unit/natural/atomic/atomicCurrent';
+import { planckCurrent } from '../../unit/natural/planck/planckCurrent';
 import { ampere } from '../../unit/si/base/ampere';
 
 export const electricCurrent = 'electricCurrent' as QuantityRef< ElectricCurrentDim >;
@@ -10,7 +14,11 @@ export default ( {
   id: electricCurrent,
   dim: ElectricCurrentDim,
   units: [
-    ampere
+    ampere,
+    atomicCurrent,
+    biot,
+    planckCurrent,
+    statampere
   ],
   baseUnit: ampere,
   branch: Branch.ELECTROMAGNETISM,
