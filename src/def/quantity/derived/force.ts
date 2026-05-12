@@ -4,6 +4,7 @@ import { ForceDim } from '../../../types/dimension';
 
 import { dyne } from '../../unit/cgs/dyne';
 import { poundForce } from '../../unit/imperial/force/poundForce';
+import { planckForce } from '../../unit/natural/planck/planckForce';
 import { newton } from '../../unit/si/derived/newton';
 
 export const force = 'force' as QuantityRef< ForceDim >;
@@ -14,6 +15,7 @@ export default ( {
   units: [
     dyne,
     newton,
+    planckForce,
     poundForce
   ],
   baseUnit: newton,
