@@ -60,8 +60,8 @@ export default ( {
       [ Lang.DE ]: 'Zeit'
     },
     description: {
-      [ Lang.EN ]: 'dimension in which events can be ordered from the past through the present into the future',
-      [ Lang.DE ]: 'Dimension, die Ereignisse von der Vergangenheit in die Zukunft ordnet'
+      [ Lang.EN ]: 'quantity expressing the progression of events from the past to the future',
+      [ Lang.DE ]: 'Größe, die den Ablauf von Ereignissen von der Vergangenheit bis zur Zukunft ausdrückt'
     }
   }
 } ) as const satisfies QuantityDef< TimeDim, typeof time >;
