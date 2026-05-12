@@ -28,7 +28,7 @@ export default ( {
     base: newton,
     factor: 1e-5
   },
-  prefixable: true,
+  prefixable: false,
   aliases: [
     'dyne',
     'dynes'

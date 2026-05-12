@@ -3,6 +3,7 @@ import { Branch, Format, Lang } from '../../../types/dict';
 import { ForceDim } from '../../../types/dimension';
 
 import { dyne } from '../../unit/cgs/dyne';
+import { poundForce } from '../../unit/imperial/force/poundForce';
 import { newton } from '../../unit/si/derived/newton';
 
 export const force = 'force' as QuantityRef< ForceDim >;
@@ -12,7 +13,8 @@ export default ( {
   dim: ForceDim,
   units: [
     dyne,
-    newton
+    newton,
+    poundForce
   ],
   baseUnit: newton,
   branch: Branch.MECHANICS,
