@@ -35,7 +35,7 @@ export default ( {
       }
     } ],
     name: {
-      [ Lang.EN ]: [ 'stone', 'stones' ],
+      [ Lang.EN ]: [ 'stone' ],
       [ Lang.DE ]: [ 'Stone' ]
     },
     description: {
