@@ -2,6 +2,7 @@ import type { QuantityDef, QuantityRef } from '../../../types/def/quantity';
 import { Branch, Format, Lang } from '../../../types/dict';
 import { ForceDim } from '../../../types/dimension';
 
+import { dyne } from '../../unit/cgs/dyne';
 import { newton } from '../../unit/si/derived/newton';
 
 export const force = 'force' as QuantityRef< ForceDim >;
@@ -10,6 +11,7 @@ export default ( {
   id: force,
   dim: ForceDim,
   units: [
+    dyne,
     newton
   ],
   baseUnit: newton,
