@@ -39,6 +39,9 @@ export default ( {
     ],
     status: UnitStatus.HISTORICAL
   },
+  deprecated: {
+    replacement: newton
+  },
   meta: {
     symbol: [ {
       id: 'dyn',
