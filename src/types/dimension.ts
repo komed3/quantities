@@ -33,3 +33,10 @@ export type AmountOfSubstanceDim = typeof AmountOfSubstanceDim;
 
 export const LuminousIntensityDim = [ 0, 0, 0, 0, 0, 0, 1 ] as const satisfies Dimension;
 export type LuminousIntensityDim = typeof LuminousIntensityDim;
+
+// Derived Dimensions
+export const ForceDim = [ -2, 1, 1, 0, 0, 0, 0 ] as const satisfies Dimension;
+export type ForceDim = typeof ForceDim;
+
+export const PressureDim = [ -2, -1, 1, 0, 0, 0, 0 ] as const satisfies Dimension;
+export type PressureDim = typeof PressureDim;
