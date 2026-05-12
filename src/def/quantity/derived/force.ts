@@ -3,6 +3,7 @@ import { Branch, Format, Lang } from '../../../types/dict';
 import { ForceDim } from '../../../types/dimension';
 
 import { dyne } from '../../unit/cgs/dyne';
+import { kilopond } from '../../unit/common/force/kilopond';
 import { poundForce } from '../../unit/imperial/force/poundForce';
 import { planckForce } from '../../unit/natural/planck/planckForce';
 import { newton } from '../../unit/si/derived/newton';
@@ -14,6 +15,7 @@ export default ( {
   dim: ForceDim,
   units: [
     dyne,
+    kilopond,
     newton,
     planckForce,
     poundForce

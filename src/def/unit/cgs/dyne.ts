@@ -37,7 +37,7 @@ export default ( {
     system: [
       UnitSystem.CGS
     ],
-    status: UnitStatus.HISTORICAL
+    status: UnitStatus.OBSOLETE
   },
   deprecated: {
     replacement: newton
