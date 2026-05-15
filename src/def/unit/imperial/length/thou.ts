@@ -38,7 +38,6 @@ export default ( {
       }
     }, {
       id: 'mil',
-      canonical: true,
       format: {
         [ Format.PLAIN ]: 'mil',
         [ Format.LATEX ]: '\\mathrm{mil}'

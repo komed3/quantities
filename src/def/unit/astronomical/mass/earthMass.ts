@@ -37,7 +37,6 @@ export default ( {
       }
     }, {
       id: 'ME',
-      canonical: true,
       format: {
         [ Format.PLAIN ]: 'ME',
         [ Format.LATEX ]: '\\mathrm{M_{E}}'

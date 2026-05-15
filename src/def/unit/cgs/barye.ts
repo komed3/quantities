@@ -48,7 +48,6 @@ export default ( {
       }
     }, {
       id: 'Ba',
-      canonical: true,
       format: {
         [ Format.PLAIN ]: 'Ba',
         [ Format.LATEX ]: '\\mathrm{Ba}'

@@ -39,7 +39,6 @@ export default ( {
       }
     }, {
       id: 'abA',
-      canonical: true,
       format: {
         [ Format.PLAIN ]: 'abA',
         [ Format.LATEX ]: '\\mathrm{abA}'
