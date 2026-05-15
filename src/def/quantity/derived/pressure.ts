@@ -3,6 +3,7 @@ import { Branch, Format, Lang } from '../../../types/dict';
 import { PressureDim } from '../../../types/dimension';
 
 import { barye } from '../../unit/cgs/barye';
+import { bar } from '../../unit/common/pressure/bar';
 import { planckPressure } from '../../unit/natural/planck/planckPressure';
 import { pascal } from '../../unit/si/derived/pascal';
 
@@ -12,6 +13,7 @@ export default ( {
   id: pressure,
   dim: PressureDim,
   units: [
+    bar,
     barye,
     pascal,
     planckPressure
