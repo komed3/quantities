@@ -38,7 +38,7 @@ export default ( {
     } ],
     name: {
       [ Lang.EN ]: [ 'pound of force', 'pounds of force' ],
-      [ Lang.DE ]: [ 'Kraftpfund' ]
+      [ Lang.DE ]: [ 'Kraftpfund', 'Kraftpfunde' ]
     },
     description: {
       [ Lang.EN ]: 'imperical unit of force, used in the US by engineerers',

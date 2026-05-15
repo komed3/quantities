@@ -46,8 +46,8 @@ export default ( {
       }
     } ],
     name: {
-      [ Lang.EN ]: [ 'pound force per square inch', 'pound forces per square inch' ],
-      [ Lang.DE ]: [ 'Pfund pro Quadratzoll' ]
+      [ Lang.EN ]: [ 'pound-force per square inch', 'pound-forces per square inch' ],
+      [ Lang.DE ]: [ 'Pfund pro Quadratzoll', 'Pfunde pro Quadratzoll' ]
     },
     description: {
       [ Lang.EN ]: 'imperial unit of pressure, commonly used in the US to express tire pressure and other mechanical pressures',
