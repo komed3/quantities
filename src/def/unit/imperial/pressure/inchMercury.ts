@@ -40,7 +40,8 @@ export default ( {
       id: 'prime',
       canonical: true,
       format: {
-        [ Format.PLAIN ]: '″Hg',
+        [ Format.PLAIN ]: '"Hg',
+        [ Format.UNICODE ]: '″Hg',
         [ Format.LATEX ]: '\\mathrm{^{\\prime\\prime}Hg}'
       }
     } ],
