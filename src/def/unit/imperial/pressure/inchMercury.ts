@@ -47,7 +47,7 @@ export default ( {
     } ],
     name: {
       [ Lang.EN ]: [ 'inch of mercury', 'inch of mercury' ],
-      [ Lang.DE ]: [ 'Zoll Quecksilber' ]
+      [ Lang.DE ]: [ 'Zoll Quecksilbersäule' ]
     },
     description: {
       [ Lang.EN ]: 'imperial unit of pressure, defined as the pressure exerted by a column of mercury 1 inch high at the standard acceleration of gravity, approximately equal to 3.38639 kPa',
