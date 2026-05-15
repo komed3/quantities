@@ -2,12 +2,17 @@ import type { UnitDef, UnitRef } from '../../../../types/def/unit';
 import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
 import { FrequencyDim } from '../../../../types/dimension';
 
+import { second } from '../base/second';
+
 export const hertz = 'Hz' as UnitRef< FrequencyDim, 'Hz' >;
 
 export default ( {
   id: hertz,
   dim: FrequencyDim,
-  structure: [],
+  structure: [ {
+    unit: second,
+    exp: -1
+  } ],
   conversion: 1,
   prefixable: true,
   aliases: [
