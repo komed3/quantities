@@ -3,6 +3,7 @@ import { Branch, Format, Lang } from '../../../types/dict';
 import { PressureDim } from '../../../types/dimension';
 
 import { barye } from '../../unit/cgs/barye';
+import { planckPressure } from '../../unit/natural/planck/planckPressure';
 import { pascal } from '../../unit/si/derived/pascal';
 
 export const pressure = 'pressure' as QuantityRef< PressureDim >;
@@ -11,8 +12,9 @@ export default ( {
   id: pressure,
   dim: PressureDim,
   units: [
+    barye,
     pascal,
-    barye
+    planckPressure
   ],
   baseUnit: pascal,
   branch: Branch.MECHANICS,
