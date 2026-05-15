@@ -1,5 +1,5 @@
 import type { ConstDef, ConstRef } from '../../types/def/constant';
-import { Format } from '../../types/dict';
+import { Format, Lang } from '../../types/dict';
 
 export const gravitationalConst = 'G' as ConstRef< [ -2, 3, -1, 0, 0, 0, 0 ], 'G' >;
 
@@ -16,6 +16,21 @@ export default ( {
         [ Format.PLAIN ]: 'G',
         [ Format.LATEX ]: 'G'
       }
-    } ]
+    }, {
+      id: 'gamma',
+      format: {
+        [ Format.PLAIN ]: 'gamma',
+        [ Format.UNICODE ]: 'γ',
+        [ Format.LATEX ]: '\\gamma'
+      }
+    } ],
+    name: {
+      [ Lang.EN ]: 'gravitational constant',
+      [ Lang.DE ]: 'Gravitationskonstante'
+    },
+    description: {
+      [ Lang.EN ]: 'impirtial constant used in the calculation of gravitational force between two bodies',
+      [ Lang.DE ]: 'universelle Konstante, die in der Berechnung der Gravitationskraft zwischen zwei Körpern verwendet wird'
+    }
   }
 } ) as const satisfies ConstDef< [ -2, 3, -1, 0, 0, 0, 0 ], typeof gravitationalConst >;
