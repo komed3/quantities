@@ -12,5 +12,5 @@ export type Registry = {
   prefix: PrefixRegistry;
   quantity: QuantityRegistry;
   unit: UnitRegistry;
-  const: ConstRegistry;
+  constant: ConstRegistry;
 };
