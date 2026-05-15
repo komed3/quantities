@@ -40,3 +40,6 @@ export type ForceDim = typeof ForceDim;
 
 export const PressureDim = [ -2, -1, 1, 0, 0, 0, 0 ] as const satisfies Dimension;
 export type PressureDim = typeof PressureDim;
+
+export const StressDim = PressureDim;
+export type StressDim = typeof StressDim;
