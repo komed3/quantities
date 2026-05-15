@@ -49,8 +49,8 @@ export default ( {
       [ Lang.DE ]: [ 'Planck-Strom', 'Planck-Ströme' ]
     },
     description: {
-      [ Lang.EN ]: 'Planck unit of electric current in the system of natural units, highest meaningful electric current',
-      [ Lang.DE ]: 'Planck-Einheit des elektrischen Stroms im System der natürlichen Einheiten, höchste sinnvolle elektrische Stromstärke'
+      [ Lang.EN ]: 'Planck unit of electric current in the system of natural units; highest meaningful electric current',
+      [ Lang.DE ]: 'Planck-Einheit des elektrischen Stroms im System der natürlichen Einheiten; höchste sinnvolle elektrische Stromstärke'
     }
   }
 } ) as const satisfies UnitDef< ElectricCurrentDim, typeof planckCurrent >;

@@ -50,8 +50,8 @@ export default ( {
       [ Lang.DE ]: [ 'Planck-Zeit', 'Planck-Zeiten' ]
     },
     description: {
-      [ Lang.EN ]: 'Planck unit of time in the system of natural units, smallest meaningful span of time',
-      [ Lang.DE ]: 'Planck-Einheit der Zeit im System der natürlichen Einheiten, kleinste sinnvolle Zeitspanne'
+      [ Lang.EN ]: 'Planck unit of time in the system of natural units; smallest meaningful span of time',
+      [ Lang.DE ]: 'Planck-Einheit der Zeit im System der natürlichen Einheiten; kleinste sinnvolle Zeitspanne'
     }
   }
 } ) as const satisfies UnitDef< TimeDim, typeof planckTime >;

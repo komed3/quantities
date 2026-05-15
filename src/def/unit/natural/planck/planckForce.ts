@@ -49,8 +49,8 @@ export default ( {
       [ Lang.DE ]: [ 'Planck-Kraft', 'Planck-Kräfte' ]
     },
     description: {
-      [ Lang.EN ]: 'Planck unit of force in the system of natural units, highest meaningful force',
-      [ Lang.DE ]: 'Planck-Einheit der Kraft im System der natürlichen Einheiten, höchste sinnvolle Kraft'
+      [ Lang.EN ]: 'Planck unit of force in the system of natural units; highest meaningful force',
+      [ Lang.DE ]: 'Planck-Einheit der Kraft im System der natürlichen Einheiten; höchste sinnvolle Kraft'
     }
   }
 } ) as const satisfies UnitDef< ForceDim, typeof planckForce >;

@@ -50,8 +50,8 @@ export default ( {
       [ Lang.DE ]: [ 'Planck-Temperatur', 'Planck-Temperaturen' ]
     },
     description: {
-      [ Lang.EN ]: 'Planck unit of temperature in the system of natural units, highest meaningful temperature',
-      [ Lang.DE ]: 'Planck-Einheit der Temperatur im System der natürlichen Einheiten, höchste sinnvolle Temperatur'
+      [ Lang.EN ]: 'Planck unit of temperature in the system of natural units; highest meaningful temperature',
+      [ Lang.DE ]: 'Planck-Einheit der Temperatur im System der natürlichen Einheiten; höchste sinnvolle Temperatur'
     }
   }
 } ) as const satisfies UnitDef< TemperatureDim, typeof planckTemperature >;

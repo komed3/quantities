@@ -50,8 +50,8 @@ export default ( {
       [ Lang.DE ]: [ 'Planck-Mass', 'Planck-Massen' ]
     },
     description: {
-      [ Lang.EN ]: 'Planck unit of mass in the system of natural units, mass at which quantum effects of gravity become significant',
-      [ Lang.DE ]: 'Planck-Einheit der Masse im System der natürlichen Einheiten, Masse, bei der Quanteneffekte der Gravitation signifikant werden'
+      [ Lang.EN ]: 'Planck unit of mass in the system of natural units; mass at which quantum effects of gravity become significant',
+      [ Lang.DE ]: 'Planck-Einheit der Masse im System der natürlichen Einheiten; Masse, bei der Quanteneffekte der Gravitation signifikant werden'
     }
   }
 } ) as const satisfies UnitDef< MassDim, typeof planckMass >;

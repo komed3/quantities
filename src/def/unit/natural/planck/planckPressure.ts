@@ -49,8 +49,8 @@ export default ( {
       [ Lang.DE ]: [ 'Planck-Druck', 'Planck-Drücke' ]
     },
     description: {
-      [ Lang.EN ]: 'Planck unit of pressure in the system of natural units, pressure at which quantum effects of gravity become significant',
-      [ Lang.DE ]: 'Planck-Einheit des Drucks im System der natürlichen Einheiten, Druck, bei dem Quanteneffekte der Gravitation signifikant werden'
+      [ Lang.EN ]: 'Planck unit of pressure in the system of natural units; pressure at which quantum effects of gravity become significant',
+      [ Lang.DE ]: 'Planck-Einheit des Drucks im System der natürlichen Einheiten; Druck, bei dem Quanteneffekte der Gravitation signifikant werden'
     }
   }
 } ) as const satisfies UnitDef< PressureDim, typeof planckPressure >;
