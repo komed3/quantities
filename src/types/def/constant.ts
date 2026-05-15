@@ -1,5 +1,6 @@
 import type { Deprecated, Meta } from '../common';
 import type { Dimension } from '../dimension';
+import type { UnitStruct } from './unit';
 
 export type ConstRef<
   D extends Dimension = Dimension,
@@ -17,6 +18,8 @@ export type ConstDef<
   readonly dim: D;
   value: number;
   uncertainty?: number;
+  structure: UnitStruct;
+  aliases?: string[];
   deprecated?: Deprecated< ConstRef >;
   meta: Meta;
 };

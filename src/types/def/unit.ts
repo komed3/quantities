@@ -15,6 +15,8 @@ export type UnitStruct = Array< {
   unit: UnitRef;
   exp: number;
   prefix?: PrefixRef;
+} | {
+  factor: number;
 } >;
 
 export type UnitConv< D extends Dimension = Dimension > =
