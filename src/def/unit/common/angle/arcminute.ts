@@ -24,6 +24,7 @@ export default ( {
     'arc minutes',
     'minute arc',
     'minute arcs',
+    'arc min',
     '′'
   ],
   context: {
@@ -51,7 +52,7 @@ export default ( {
     } ],
     name: {
       [ Lang.EN ]: [ 'arcminute', 'arcminutes' ],
-      [ Lang.DE ]: [ 'Winkelminute', 'Winkelminuten' ]
+      [ Lang.DE ]: [ 'Bogenminute', 'Bogenminuten' ]
     },
     description: {
       [ Lang.EN ]: 'unit of angle, defined as 1/60 of a degree',
