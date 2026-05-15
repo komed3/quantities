@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
 import { AngleDim } from '../../../../types/dimension';
 
 import { radian } from '../../si/derived/radian';
@@ -23,7 +23,8 @@ export default ( {
     system: [
       UnitSystem.COMMON
     ],
-    status: UnitStatus.ACTIVE
+    status: UnitStatus.ACTIVE,
+    si: UnitSIType.ACCEPTED
   },
   meta: {
     symbol: [ {
