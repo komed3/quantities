@@ -6,6 +6,7 @@ import { barye } from '../../unit/cgs/barye';
 import { bar } from '../../unit/common/pressure/bar';
 import { standardAtmosphere } from '../../unit/common/pressure/standardAtmosphere';
 import { technicalAtmosphere } from '../../unit/common/pressure/technicalAtmosphere';
+import { torr } from '../../unit/common/pressure/torr';
 import { inchMercury } from '../../unit/imperial/pressure/inchMercury';
 import { poundForcePerSquareInch } from '../../unit/imperial/pressure/poundForcePerSquareInch';
 import { planckPressure } from '../../unit/natural/planck/planckPressure';
@@ -24,7 +25,8 @@ export default ( {
     planckPressure,
     poundForcePerSquareInch,
     standardAtmosphere,
-    technicalAtmosphere
+    technicalAtmosphere,
+    torr
   ],
   baseUnit: pascal,
   branch: Branch.MECHANICS,
