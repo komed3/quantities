@@ -38,14 +38,12 @@ export default ( {
       }
     }, {
       id: 'l.',
-      canonical: true,
       format: {
         [ Format.PLAIN ]: 'l.',
         [ Format.LATEX ]: '\\mathrm{l.}'
       }
     }, {
       id: 'lnk.',
-      canonical: true,
       format: {
         [ Format.PLAIN ]: 'lnk.',
         [ Format.LATEX ]: '\\mathrm{lnk.}'

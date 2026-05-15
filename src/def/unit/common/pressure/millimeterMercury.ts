@@ -36,7 +36,6 @@ export default ( {
       }
     }, {
       id: 'mm_Hg',
-      canonical: true,
       format: {
         [ Format.PLAIN ]: 'mm Hg',
         [ Format.LATEX ]: '\\mathrm{mm\\,Hg}'

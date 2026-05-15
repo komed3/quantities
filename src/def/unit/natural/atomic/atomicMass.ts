@@ -43,7 +43,6 @@ export default ( {
       }
     }, {
       id: 'Da',
-      canonical: true,
       format: {
         [ Format.PLAIN ]: 'Da',
         [ Format.LATEX ]: '\\mathrm{Da}'

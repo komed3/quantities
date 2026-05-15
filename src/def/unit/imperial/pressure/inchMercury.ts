@@ -38,7 +38,6 @@ export default ( {
       }
     }, {
       id: 'prime',
-      canonical: true,
       format: {
         [ Format.PLAIN ]: '"Hg',
         [ Format.UNICODE ]: '″Hg',
