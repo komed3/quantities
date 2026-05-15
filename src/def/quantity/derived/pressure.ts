@@ -6,6 +6,7 @@ import { barye } from '../../unit/cgs/barye';
 import { bar } from '../../unit/common/pressure/bar';
 import { standardAtmosphere } from '../../unit/common/pressure/standardAtmosphere';
 import { technicalAtmosphere } from '../../unit/common/pressure/technicalAtmosphere';
+import { inchMercury } from '../../unit/imperial/pressure/inchMercury';
 import { poundForcePerSquareInch } from '../../unit/imperial/pressure/poundForcePerSquareInch';
 import { planckPressure } from '../../unit/natural/planck/planckPressure';
 import { pascal } from '../../unit/si/derived/pascal';
@@ -18,6 +19,7 @@ export default ( {
   units: [
     bar,
     barye,
+    inchMercury,
     pascal,
     planckPressure,
     poundForcePerSquareInch,
