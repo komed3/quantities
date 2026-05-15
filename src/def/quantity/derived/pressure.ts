@@ -4,6 +4,7 @@ import { PressureDim } from '../../../types/dimension';
 
 import { barye } from '../../unit/cgs/barye';
 import { bar } from '../../unit/common/pressure/bar';
+import { meterWater } from '../../unit/common/pressure/meterWater';
 import { millimeterMercury } from '../../unit/common/pressure/millimeterMercury';
 import { standardAtmosphere } from '../../unit/common/pressure/standardAtmosphere';
 import { technicalAtmosphere } from '../../unit/common/pressure/technicalAtmosphere';
@@ -22,6 +23,7 @@ export default ( {
     bar,
     barye,
     inchMercury,
+    meterWater,
     millimeterMercury,
     pascal,
     planckPressure,
