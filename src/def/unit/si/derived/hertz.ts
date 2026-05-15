@@ -1,0 +1,42 @@
+import type { UnitDef, UnitRef } from '../../../../types/def/unit';
+import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { FrequencyDim } from '../../../../types/dimension';
+
+export const hertz = 'Hz' as UnitRef< FrequencyDim, 'Hz' >;
+
+export default ( {
+  id: hertz,
+  dim: FrequencyDim,
+  structure: [],
+  conversion: 1,
+  prefixable: true,
+  aliases: [
+    'hertz',
+    'hertzes'
+  ],
+  context: {
+    system: [
+      UnitSystem.SI
+    ],
+    status: UnitStatus.ACTIVE,
+    si: UnitSIType.DERIVED
+  },
+  meta: {
+    symbol: [ {
+      id: 'Hz',
+      canonical: true,
+      format: {
+        [ Format.PLAIN ]: 'Hz',
+        [ Format.LATEX ]: '\\mathrm{Hz}'
+      }
+    } ],
+    name: {
+      [ Lang.EN ]: [ 'hertz', 'hertzes' ],
+      [ Lang.DE ]: [ 'Hertz' ]
+    },
+    description: {
+      [ Lang.EN ]: 'SI unit of frequency, defined as one cycle per second',
+      [ Lang.DE ]: 'SI-Einheit der Frequenz, definiert als ein Zyklus pro Sekunde'
+    }
+  }
+} ) as const satisfies UnitDef< FrequencyDim, typeof hertz >;
