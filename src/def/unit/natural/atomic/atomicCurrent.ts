@@ -53,7 +53,7 @@ export default ( {
       }
     },
     name: {
-      [ Lang.EN ]: [ 'atomic current', 'atomic current' ],
+      [ Lang.EN ]: [ 'atomic current', 'atomic currents' ],
       [ Lang.DE ]: [ 'atomare Stromeinheit', 'atomare Stromeinheiten' ]
     },
     description: {
