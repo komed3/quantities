@@ -59,6 +59,13 @@ export default ( {
         [ Format.UNICODE ]: 'φ',
         [ Format.LATEX ]: '\\varphi'
       }
+    }, {
+      id: 'angle',
+      format: {
+        [ Format.PLAIN ]: 'angle',
+        [ Format.UNICODE ]: '∠',
+        [ Format.LATEX ]: '\\angle'
+      }
     } ],
     name: {
       [ Lang.EN ]: 'angle',
