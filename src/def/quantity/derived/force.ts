@@ -6,6 +6,7 @@ import { dyne } from '../../unit/cgs/dyne';
 import { kilopond } from '../../unit/common/force/kilopond';
 import { poundal } from '../../unit/imperial/force/poundal';
 import { poundForce } from '../../unit/imperial/force/poundForce';
+import { atomicForce } from '../../unit/natural/atomic/atomicForce';
 import { planckForce } from '../../unit/natural/planck/planckForce';
 import { newton } from '../../unit/si/derived/newton';
 import { kilopound } from '../../unit/usc/force/kilopound';
@@ -16,6 +17,7 @@ export default ( {
   id: force,
   dim: ForceDim,
   units: [
+    atomicForce,
     dyne,
     kilopond,
     kilopound,
