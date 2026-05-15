@@ -4,6 +4,7 @@ import { PressureDim } from '../../../types/dimension';
 
 import { barye } from '../../unit/cgs/barye';
 import { bar } from '../../unit/common/pressure/bar';
+import { technicalAtmosphere } from '../../unit/common/pressure/technicalAtmosphere';
 import { planckPressure } from '../../unit/natural/planck/planckPressure';
 import { pascal } from '../../unit/si/derived/pascal';
 
@@ -16,7 +17,8 @@ export default ( {
     bar,
     barye,
     pascal,
-    planckPressure
+    planckPressure,
+    technicalAtmosphere
   ],
   baseUnit: pascal,
   branch: Branch.MECHANICS,
