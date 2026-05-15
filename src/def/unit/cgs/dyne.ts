@@ -56,8 +56,8 @@ export default ( {
       [ Lang.DE ]: [ 'Dyn' ]
     },
     description: {
-      [ Lang.EN ]: 'CGS unit of force, equal to 10 µN',
-      [ Lang.DE ]: 'CGS-Einheit der Kraft, gleich 10 µN'
+      [ Lang.EN ]: 'obsolete CGS unit of force, equal to 10 µN',
+      [ Lang.DE ]: 'veraltete CGS-Einheit der Kraft, gleich 10 µN'
     }
   }
 } ) as const satisfies UnitDef< ForceDim, typeof dyne >;
