@@ -8,6 +8,7 @@ import { poundal } from '../../unit/imperial/force/poundal';
 import { poundForce } from '../../unit/imperial/force/poundForce';
 import { planckForce } from '../../unit/natural/planck/planckForce';
 import { newton } from '../../unit/si/derived/newton';
+import { kilopound } from '../../unit/usc/force/kilopound';
 
 export const force = 'force' as QuantityRef< ForceDim >;
 
@@ -17,6 +18,7 @@ export default ( {
   units: [
     dyne,
     kilopond,
+    kilopound,
     newton,
     planckForce,
     poundal,
