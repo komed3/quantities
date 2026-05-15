@@ -17,7 +17,8 @@ export default ( {
   prefixable: false,
   aliases: [
     'degree',
-    'degrees'
+    'degrees',
+    '°'
   ],
   context: {
     system: [
