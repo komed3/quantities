@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { PressureDim } from '../../../../types/dimension';
 
 import { pascal } from '../../si/derived/pascal';
@@ -7,6 +7,7 @@ import { pascal } from '../../si/derived/pascal';
 export const planckPressure = 'pP' as UnitRef< PressureDim, 'pP' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: planckPressure,
   dim: PressureDim,
   structure: [],
@@ -53,4 +54,4 @@ export default ( {
       [ Lang.DE ]: 'Planck-Einheit des Drucks im System der natürlichen Einheiten; Druck, bei dem Quanteneffekte der Gravitation signifikant werden'
     }
   }
-} ) as const satisfies UnitDef< PressureDim, typeof planckPressure >;
+} ) as const satisfies UnitDef< PressureDim, UnitType.NAMED, typeof planckPressure >;

@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { LengthDim } from '../../../../types/dimension';
 
 import { meter } from '../../si/base/meter';
@@ -7,6 +7,7 @@ import { meter } from '../../si/base/meter';
 export const planckLength = 'lP' as UnitRef< LengthDim, 'lP' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: planckLength,
   dim: LengthDim,
   structure: [],
@@ -54,4 +55,4 @@ export default ( {
       [ Lang.DE ]: 'Planck-Einheit der Länge im System der natürlichen Einheiten; kleinste sinnvolle Länge'
     }
   }
-} ) as const satisfies UnitDef< LengthDim, typeof planckLength >;
+} ) as const satisfies UnitDef< LengthDim, UnitType.NAMED, typeof planckLength >;

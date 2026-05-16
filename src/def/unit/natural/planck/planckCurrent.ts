@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { ElectricCurrentDim } from '../../../../types/dimension';
 
 import { ampere } from '../../si/base/ampere';
@@ -7,6 +7,7 @@ import { ampere } from '../../si/base/ampere';
 export const planckCurrent = 'IP' as UnitRef< ElectricCurrentDim, 'IP' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: planckCurrent,
   dim: ElectricCurrentDim,
   structure: [],
@@ -53,4 +54,4 @@ export default ( {
       [ Lang.DE ]: 'Planck-Einheit des elektrischen Stroms im System der natürlichen Einheiten; höchste sinnvolle elektrische Stromstärke'
     }
   }
-} ) as const satisfies UnitDef< ElectricCurrentDim, typeof planckCurrent >;
+} ) as const satisfies UnitDef< ElectricCurrentDim, UnitType.NAMED, typeof planckCurrent >;

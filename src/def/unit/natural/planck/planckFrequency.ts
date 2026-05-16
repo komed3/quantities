@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { FrequencyDim } from '../../../../types/dimension';
 
 import { hertz } from '../../si/derived/hertz';
@@ -7,6 +7,7 @@ import { hertz } from '../../si/derived/hertz';
 export const planckFrequency = 'fP' as UnitRef< FrequencyDim, 'fP' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: planckFrequency,
   dim: FrequencyDim,
   structure: [],
@@ -53,4 +54,4 @@ export default ( {
       [ Lang.DE ]: 'Planck-Einheit der Frequenz im System der natürlichen Einheiten; Frequenz, bei der Quanteneffekte der Gravitation signifikant werden'
     }
   }
-} ) as const satisfies UnitDef< FrequencyDim, typeof planckFrequency >;
+} ) as const satisfies UnitDef< FrequencyDim, UnitType.NAMED, typeof planckFrequency >;

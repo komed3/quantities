@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { ForceDim } from '../../../../types/dimension';
 
 import { newton } from '../../si/derived/newton';
@@ -7,6 +7,7 @@ import { newton } from '../../si/derived/newton';
 export const planckForce = 'FP' as UnitRef< ForceDim, 'FP' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: planckForce,
   dim: ForceDim,
   structure: [],
@@ -53,4 +54,4 @@ export default ( {
       [ Lang.DE ]: 'Planck-Einheit der Kraft im System der natürlichen Einheiten; höchste sinnvolle Kraft'
     }
   }
-} ) as const satisfies UnitDef< ForceDim, typeof planckForce >;
+} ) as const satisfies UnitDef< ForceDim, UnitType.NAMED, typeof planckForce >;

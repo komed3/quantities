@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TimeDim } from '../../../../types/dimension';
 
 import { second } from '../../si/base/second';
@@ -7,6 +7,7 @@ import { second } from '../../si/base/second';
 export const planckTime = 'tP' as UnitRef< TimeDim, 'tP' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: planckTime,
   dim: TimeDim,
   structure: [],
@@ -54,4 +55,4 @@ export default ( {
       [ Lang.DE ]: 'Planck-Einheit der Zeit im System der natürlichen Einheiten; kleinste sinnvolle Zeitspanne'
     }
   }
-} ) as const satisfies UnitDef< TimeDim, typeof planckTime >;
+} ) as const satisfies UnitDef< TimeDim, UnitType.NAMED, typeof planckTime >;

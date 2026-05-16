@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TemperatureDim } from '../../../../types/dimension';
 
 import { kelvin } from '../../si/base/kelvin';
@@ -7,6 +7,7 @@ import { kelvin } from '../../si/base/kelvin';
 export const planckTemperature = 'TP' as UnitRef< TemperatureDim, 'TP' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: planckTemperature,
   dim: TemperatureDim,
   structure: [],
@@ -54,4 +55,4 @@ export default ( {
       [ Lang.DE ]: 'Planck-Einheit der Temperatur im System der natürlichen Einheiten; höchste sinnvolle Temperatur'
     }
   }
-} ) as const satisfies UnitDef< TemperatureDim, typeof planckTemperature >;
+} ) as const satisfies UnitDef< TemperatureDim, UnitType.NAMED, typeof planckTemperature >;
