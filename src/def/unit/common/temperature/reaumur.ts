@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TemperatureDim } from '../../../../types/dimension';
 
 import { kelvin } from '../../si/base/kelvin';
@@ -7,6 +7,7 @@ import { kelvin } from '../../si/base/kelvin';
 export const reaumur = 'degRe' as UnitRef< TemperatureDim, 'degRe' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: reaumur,
   dim: TemperatureDim,
   structure: [],
@@ -54,4 +55,4 @@ export default ( {
       [ Lang.DE ]: 'historische Temperatureinheit, die auf der Ausdehnung von Ethanol basiert'
     }
   }
-} ) as const satisfies UnitDef< TemperatureDim, typeof reaumur >;
+} ) as const satisfies UnitDef< TemperatureDim, UnitType.NAMED, typeof reaumur >;

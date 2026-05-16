@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TemperatureDim } from '../../../../types/dimension';
 
 import { kelvin } from '../../si/base/kelvin';
@@ -7,6 +7,7 @@ import { kelvin } from '../../si/base/kelvin';
 export const romer = 'degRo' as UnitRef< TemperatureDim, 'degRo' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: romer,
   dim: TemperatureDim,
   structure: [],
@@ -48,4 +49,4 @@ export default ( {
       [ Lang.DE ]: 'historische Temperatureinheit, die auf der Ausdehnung von Wasser basiert'
     }
   }
-} ) as const satisfies UnitDef< TemperatureDim, typeof romer >;
+} ) as const satisfies UnitDef< TemperatureDim, UnitType.NAMED, typeof romer >;

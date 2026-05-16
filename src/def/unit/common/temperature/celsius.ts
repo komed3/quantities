@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, SIType, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TemperatureDim } from '../../../../types/dimension';
 
 import { kelvin } from '../../si/base/kelvin';
@@ -7,6 +7,7 @@ import { kelvin } from '../../si/base/kelvin';
 export const celsius = 'degC' as UnitRef< TemperatureDim, 'degC' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: celsius,
   dim: TemperatureDim,
   structure: [],
@@ -29,7 +30,7 @@ export default ( {
       UnitSystem.SI
     ],
     status: UnitStatus.ACTIVE,
-    si: UnitSIType.ACCEPTED
+    si: SIType.ACCEPTED
   },
   meta: {
     symbol: [ {
@@ -50,4 +51,4 @@ export default ( {
       [ Lang.DE ]: 'akzeptierte Temperatureinheit im SI-System, definiert als t/°C = T/K - 273,15'
     }
   }
-} ) as const satisfies UnitDef< TemperatureDim, typeof celsius >;
+} ) as const satisfies UnitDef< TemperatureDim, UnitType.NAMED, typeof celsius >;

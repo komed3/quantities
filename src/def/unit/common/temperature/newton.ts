@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TemperatureDim } from '../../../../types/dimension';
 
 import { kelvin } from '../../si/base/kelvin';
@@ -7,6 +7,7 @@ import { kelvin } from '../../si/base/kelvin';
 export const newton = 'degN' as UnitRef< TemperatureDim, 'degN' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: newton,
   dim: TemperatureDim,
   structure: [],
@@ -45,4 +46,4 @@ export default ( {
       [ Lang.DE ]: 'historische Temperatureinheit, die von Isaac Newton eingeführt wurde'
     }
   }
-} ) as const satisfies UnitDef< TemperatureDim, typeof newton >;
+} ) as const satisfies UnitDef< TemperatureDim, UnitType.NAMED, typeof newton >;

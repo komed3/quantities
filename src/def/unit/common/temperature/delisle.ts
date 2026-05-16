@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TemperatureDim } from '../../../../types/dimension';
 
 import { kelvin } from '../../si/base/kelvin';
@@ -7,6 +7,7 @@ import { kelvin } from '../../si/base/kelvin';
 export const delisle = 'degDe' as UnitRef< TemperatureDim, 'degDe' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: delisle,
   dim: TemperatureDim,
   structure: [],
@@ -46,4 +47,4 @@ export default ( {
       [ Lang.DE ]: 'historische Temperatureinheit, invertierte Skala, die im 18. Jahrhundert in Frankreich und Russland verwendet wurde'
     }
   }
-} ) as const satisfies UnitDef< TemperatureDim, typeof delisle >;
+} ) as const satisfies UnitDef< TemperatureDim, UnitType.NAMED, typeof delisle >;
