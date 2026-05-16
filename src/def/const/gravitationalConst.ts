@@ -48,7 +48,7 @@ export default ( {
       [ Lang.DE ]: 'Gravitationskonstante'
     },
     description: {
-      [ Lang.EN ]: 'impirtial constant used in the calculation of gravitational force between two bodies',
+      [ Lang.EN ]: 'universal constant used in the calculation of gravitational force between two bodies',
       [ Lang.DE ]: 'universelle Konstante, die in der Berechnung der Gravitationskraft zwischen zwei Körpern verwendet wird'
     }
   }
