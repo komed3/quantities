@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { LengthDim } from '../../../../types/dimension';
 
 import { meter } from '../../si/base/meter';
@@ -7,6 +7,7 @@ import { meter } from '../../si/base/meter';
 export const stoneyLength = 'lS' as UnitRef< LengthDim, 'lS' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: stoneyLength,
   dim: LengthDim,
   structure: [],
@@ -53,4 +54,4 @@ export default ( {
       [ Lang.DE ]: 'Einheit der Länge im System der natürlichen Einheiten, vorgeschlagen von George Stoney, basierend auf der Elementarladung'
     }
   }
-} ) as const satisfies UnitDef< LengthDim, typeof stoneyLength >;
+} ) as const satisfies UnitDef< LengthDim, UnitType.NAMED, typeof stoneyLength >;

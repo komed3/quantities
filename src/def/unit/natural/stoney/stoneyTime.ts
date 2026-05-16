@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TimeDim } from '../../../../types/dimension';
 
 import { second } from '../../si/base/second';
@@ -7,6 +7,7 @@ import { second } from '../../si/base/second';
 export const stoneyTime = 'tS' as UnitRef< TimeDim, 'tS' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: stoneyTime,
   dim: TimeDim,
   structure: [],
@@ -53,4 +54,4 @@ export default ( {
       [ Lang.DE ]: 'Einheit der Zeit im System der natürlichen Einheiten, vorgeschlagen von George Stoney, basierend auf der Elementarladung'
     }
   }
-} ) as const satisfies UnitDef< TimeDim, typeof stoneyTime >;
+} ) as const satisfies UnitDef< TimeDim, UnitType.NAMED, typeof stoneyTime >;
