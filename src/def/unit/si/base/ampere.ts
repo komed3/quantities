@@ -36,7 +36,7 @@ export default ( {
     },
     description: {
       [ Lang.EN ]: 'SI unit of electric current',
-      [ Lang.DE ]: 'SI-Basiseinheit der Stromstärme'
+      [ Lang.DE ]: 'SI-Basiseinheit der Stromstärke'
     }
   }
 } ) as const satisfies UnitDef< ElectricCurrentDim, typeof ampere >;
