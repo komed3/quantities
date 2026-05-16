@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { ForceDim } from '../../../../types/dimension';
 
 import { second } from '../../si/base/second';
@@ -10,6 +10,7 @@ import { pound } from '../mass/pound';
 export const poundal = 'pdl' as UnitRef< ForceDim, 'pdl' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: poundal,
   dim: ForceDim,
   structure: [ {
@@ -56,4 +57,4 @@ export default ( {
       [ Lang.DE ]: 'imperiale Kraft-Einheit'
     }
   }
-} ) as const satisfies UnitDef< ForceDim, typeof poundal >;
+} ) as const satisfies UnitDef< ForceDim, UnitType.NAMED, typeof poundal >;

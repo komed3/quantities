@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { LuminousIntensityDim } from '../../../../types/dimension';
 
 import { candela } from '../../si/base/candela';
@@ -7,6 +7,7 @@ import { candela } from '../../si/base/candela';
 export const candlepower = 'cp' as UnitRef< LuminousIntensityDim, 'cp' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: candlepower,
   dim: LuminousIntensityDim,
   structure: [],
@@ -50,4 +51,4 @@ export default ( {
       [ Lang.DE ]: 'historische imperiale Einheit der Lichtstärke, die 0,981 Candela entspricht'
     }
   }
-} ) as const satisfies UnitDef< LuminousIntensityDim, typeof candlepower >;
+} ) as const satisfies UnitDef< LuminousIntensityDim, UnitType.NAMED, typeof candlepower >;
