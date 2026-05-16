@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { LengthDim } from '../../../../types/dimension';
 
 import { meter } from '../../si/base/meter';
@@ -7,6 +7,7 @@ import { meter } from '../../si/base/meter';
 export const bohrRadius = 'a0' as UnitRef< LengthDim, 'a0' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: bohrRadius,
   dim: LengthDim,
   structure: [],
@@ -61,4 +62,4 @@ export default ( {
       [ Lang.DE ]: 'Längeneinheit im atomaren Einheitensystem, definiert als der wahrscheinlichste Abstand zwischen Kern und Elektron im Grundzustand des Wasserstoffatoms'
     }
   }
-} ) as const satisfies UnitDef< LengthDim, typeof bohrRadius >;
+} ) as const satisfies UnitDef< LengthDim, UnitType.NAMED, typeof bohrRadius >;

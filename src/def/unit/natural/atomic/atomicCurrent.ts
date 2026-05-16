@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { ElectricCurrentDim } from '../../../../types/dimension';
 
 import { ampere } from '../../si/base/ampere';
@@ -7,6 +7,7 @@ import { ampere } from '../../si/base/ampere';
 export const atomicCurrent = 'auCurrent' as UnitRef< ElectricCurrentDim, 'auCurrent' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: atomicCurrent,
   dim: ElectricCurrentDim,
   structure: [],
@@ -61,4 +62,4 @@ export default ( {
       [ Lang.DE ]: 'Einheit der elektrischen Stromstärke im atomaren Einheitensystem, definiert als die elektrische Stromstärke, die dem Fluss einer Elementarladung pro atomare Zeiteinheit entspricht'
     }
   }
-} ) as const satisfies UnitDef< ElectricCurrentDim, typeof atomicCurrent >;
+} ) as const satisfies UnitDef< ElectricCurrentDim, UnitType.NAMED, typeof atomicCurrent >;

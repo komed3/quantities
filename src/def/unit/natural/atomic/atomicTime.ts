@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TimeDim } from '../../../../types/dimension';
 
 import { second } from '../../si/base/second';
@@ -7,6 +7,7 @@ import { second } from '../../si/base/second';
 export const atomicTime = 'auTime' as UnitRef< TimeDim, 'auTime' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: atomicTime,
   dim: TimeDim,
   structure: [],
@@ -61,4 +62,4 @@ export default ( {
       [ Lang.DE ]: 'Zeiteinheit im atomaren Einheitensystem, definiert als die Zeit, die ein Elektron benötigt, um im Grundzustand des Wasserstoffatoms ein Proton zu umkreisen'
     }
   }
-} ) as const satisfies UnitDef< TimeDim, typeof atomicTime >;
+} ) as const satisfies UnitDef< TimeDim, UnitType.NAMED, typeof atomicTime >;

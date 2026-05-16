@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { ForceDim } from '../../../../types/dimension';
 
 import { newton } from '../../si/derived/newton';
@@ -7,6 +7,7 @@ import { newton } from '../../si/derived/newton';
 export const atomicForce = 'auForce' as UnitRef< ForceDim, 'auForce' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: atomicForce,
   dim: ForceDim,
   structure: [],
@@ -52,4 +53,4 @@ export default ( {
       [ Lang.DE ]: 'Krafteinheit im atomaren Einheitensystem, definiert als die Kraft zwischen zwei Elementarladungen, die durch eine Entfernung von einem Bohrschem Radius getrennt sind'
     }
   }
-} ) as const satisfies UnitDef< ForceDim, typeof atomicForce >;
+} ) as const satisfies UnitDef< ForceDim, UnitType.NAMED, typeof atomicForce >;

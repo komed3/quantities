@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, SIType, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { MassDim } from '../../../../types/dimension';
 
 import { gram } from '../../si/base/gram';
@@ -7,6 +7,7 @@ import { gram } from '../../si/base/gram';
 export const atomicMass = 'u' as UnitRef< MassDim, 'u' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: atomicMass,
   dim: MassDim,
   structure: [],
@@ -31,7 +32,7 @@ export default ( {
     ],
     status: UnitStatus.ACTIVE,
     constant: true,
-    si: UnitSIType.ACCEPTED
+    si: SIType.ACCEPTED
   },
   meta: {
     symbol: [ {
@@ -57,4 +58,4 @@ export default ( {
       [ Lang.DE ]: 'Maßeinheit der Masse, definiert als ein Zwölftel der Masse eines ungebundenen neutralen Atoms von Kohlenstoff-12 in seinem Kern- und Elektronengrundzustand'
     }
   }
-} ) as const satisfies UnitDef< MassDim, typeof atomicMass >;
+} ) as const satisfies UnitDef< MassDim, UnitType.NAMED, typeof atomicMass >;

@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { LengthDim } from '../../../../types/dimension';
 
 import { meter } from '../../si/base/meter';
@@ -7,6 +7,7 @@ import { meter } from '../../si/base/meter';
 export const xunit = 'xu' as UnitRef< LengthDim, 'xu' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: xunit,
   dim: LengthDim,
   structure: [],
@@ -54,4 +55,4 @@ export default ( {
       [ Lang.DE ]: 'Längeneinheit, die in der Röntgenkristallographie verwendet wird, auch als Siegbahn-Einheit bekannt, definiert als 1/100 der Wellenlänge der Kα-Linie von Kupfer (1,54056 Å)'
     }
   }
-} ) as const satisfies UnitDef< LengthDim, typeof xunit >;
+} ) as const satisfies UnitDef< LengthDim, UnitType.NAMED, typeof xunit >;
