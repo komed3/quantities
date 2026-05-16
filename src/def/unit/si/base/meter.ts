@@ -1,10 +1,11 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, SIType, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { LengthDim } from '../../../../types/dimension';
 
 export const meter = 'm' as UnitRef< LengthDim, 'm' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: meter,
   dim: LengthDim,
   structure: [],
@@ -21,7 +22,7 @@ export default ( {
       UnitSystem.SI
     ],
     status: UnitStatus.ACTIVE,
-    si: UnitSIType.BASE
+    si: SIType.BASE
   },
   meta: {
     symbol: [ {
@@ -41,4 +42,4 @@ export default ( {
       [ Lang.DE ]: 'SI-Basiseinheit der Länge'
     }
   }
-} ) as const satisfies UnitDef< LengthDim, typeof meter >;
+} ) as const satisfies UnitDef< LengthDim, UnitType.NAMED, typeof meter >;

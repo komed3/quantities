@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, SIType, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { FrequencyDim } from '../../../../types/dimension';
 
 import { second } from '../base/second';
@@ -7,6 +7,7 @@ import { second } from '../base/second';
 export const hertz = 'Hz' as UnitRef< FrequencyDim, 'Hz' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: hertz,
   dim: FrequencyDim,
   structure: [ {
@@ -24,7 +25,7 @@ export default ( {
       UnitSystem.SI
     ],
     status: UnitStatus.ACTIVE,
-    si: UnitSIType.DERIVED
+    si: SIType.DERIVED
   },
   meta: {
     symbol: [ {
@@ -44,4 +45,4 @@ export default ( {
       [ Lang.DE ]: 'SI-Einheit der Frequenz, definiert als ein Zyklus pro Sekunde'
     }
   }
-} ) as const satisfies UnitDef< FrequencyDim, typeof hertz >;
+} ) as const satisfies UnitDef< FrequencyDim, UnitType.NAMED, typeof hertz >;

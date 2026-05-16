@@ -1,10 +1,11 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, SIType, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TimeDim } from '../../../../types/dimension';
 
 export const second = 's' as UnitRef< TimeDim, 's' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: second,
   dim: TimeDim,
   structure: [],
@@ -21,7 +22,7 @@ export default ( {
       UnitSystem.SI
     ],
     status: UnitStatus.ACTIVE,
-    si: UnitSIType.BASE
+    si: SIType.BASE
   },
   meta: {
     symbol: [ {
@@ -41,4 +42,4 @@ export default ( {
       [ Lang.DE ]: 'SI-Basiseinheit der Zeit'
     }
   }
-} ) as const satisfies UnitDef< TimeDim, typeof second >;
+} ) as const satisfies UnitDef< TimeDim, UnitType.NAMED, typeof second >;

@@ -1,10 +1,11 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, SIType, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TemperatureDim } from '../../../../types/dimension';
 
 export const kelvin = 'K' as UnitRef< TemperatureDim, 'K' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: kelvin,
   dim: TemperatureDim,
   structure: [],
@@ -19,7 +20,7 @@ export default ( {
       UnitSystem.SI
     ],
     status: UnitStatus.ACTIVE,
-    si: UnitSIType.BASE
+    si: SIType.BASE
   },
   meta: {
     symbol: [ {
@@ -46,4 +47,4 @@ export default ( {
       [ Lang.DE ]: 'SI-Basiseinheit der thermodynamischen Temperatur'
     }
   }
-} ) as const satisfies UnitDef< TemperatureDim, typeof kelvin >;
+} ) as const satisfies UnitDef< TemperatureDim, UnitType.NAMED, typeof kelvin >;

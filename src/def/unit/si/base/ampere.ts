@@ -1,10 +1,11 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, SIType, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { ElectricCurrentDim } from '../../../../types/dimension';
 
 export const ampere = 'A' as UnitRef< ElectricCurrentDim, 'A' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: ampere,
   dim: ElectricCurrentDim,
   structure: [],
@@ -19,7 +20,7 @@ export default ( {
       UnitSystem.SI
     ],
     status: UnitStatus.ACTIVE,
-    si: UnitSIType.BASE
+    si: SIType.BASE
   },
   meta: {
     symbol: [ {
@@ -39,4 +40,4 @@ export default ( {
       [ Lang.DE ]: 'SI-Basiseinheit der Stromstärke'
     }
   }
-} ) as const satisfies UnitDef< ElectricCurrentDim, typeof ampere >;
+} ) as const satisfies UnitDef< ElectricCurrentDim, UnitType.NAMED, typeof ampere >;

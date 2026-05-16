@@ -1,10 +1,11 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, SIType, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { AmountOfSubstanceDim } from '../../../../types/dimension';
 
 export const mole = 'mol' as UnitRef< AmountOfSubstanceDim, 'mol' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: mole,
   dim: AmountOfSubstanceDim,
   structure: [],
@@ -19,7 +20,7 @@ export default ( {
       UnitSystem.SI
     ],
     status: UnitStatus.ACTIVE,
-    si: UnitSIType.BASE
+    si: SIType.BASE
   },
   meta: {
     symbol: [ {
@@ -39,4 +40,4 @@ export default ( {
       [ Lang.DE ]: 'SI-Basiseinheit der Stoffmenge'
     }
   }
-} ) as const satisfies UnitDef< AmountOfSubstanceDim, typeof mole >;
+} ) as const satisfies UnitDef< AmountOfSubstanceDim, UnitType.NAMED, typeof mole >;

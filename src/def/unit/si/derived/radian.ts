@@ -1,11 +1,12 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, SIType, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { AngleDim } from '../../../../types/dimension';
 import { meter } from '../base/meter';
 
 export const radian = 'rad' as UnitRef< AngleDim, 'rad' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: radian,
   dim: AngleDim,
   structure: [ {
@@ -26,7 +27,7 @@ export default ( {
       UnitSystem.SI
     ],
     status: UnitStatus.ACTIVE,
-    si: UnitSIType.DERIVED
+    si: SIType.DERIVED
   },
   meta: {
     symbol: [ {
@@ -46,4 +47,4 @@ export default ( {
       [ Lang.DE ]: 'SI-Einheit des Winkels, definiert als der Winkel, der im Mittelpunkt eines Kreises von einem Kreisbogen der Länge des Radius eingeschlossen wird'
     }
   }
-} ) as const satisfies UnitDef< AngleDim, typeof radian >;
+} ) as const satisfies UnitDef< AngleDim, UnitType.NAMED, typeof radian >;

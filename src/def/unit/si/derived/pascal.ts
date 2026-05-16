@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, SIType, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { PressureDim } from '../../../../types/dimension';
 
 import { kilo } from '../../../prefix';
@@ -10,6 +10,7 @@ import { second } from '../base/second';
 export const pascal = 'Pa' as UnitRef< PressureDim, 'Pa' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: pascal,
   dim: PressureDim,
   structure: [ {
@@ -34,7 +35,7 @@ export default ( {
       UnitSystem.SI
     ],
     status: UnitStatus.ACTIVE,
-    si: UnitSIType.DERIVED
+    si: SIType.DERIVED
   },
   meta: {
     symbol: [ {
@@ -54,4 +55,4 @@ export default ( {
       [ Lang.DE ]: 'abgeleitete SI-Einheit des Drucks'
     }
   }
-} ) as const satisfies UnitDef< PressureDim, typeof pascal >;
+} ) as const satisfies UnitDef< PressureDim, UnitType.NAMED, typeof pascal >;

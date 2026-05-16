@@ -1,10 +1,11 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, SIType, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { LuminousIntensityDim } from '../../../../types/dimension';
 
 export const candela = 'cd' as UnitRef< LuminousIntensityDim, 'cd' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: candela,
   dim: LuminousIntensityDim,
   structure: [],
@@ -19,7 +20,7 @@ export default ( {
       UnitSystem.SI
     ],
     status: UnitStatus.ACTIVE,
-    si: UnitSIType.BASE
+    si: SIType.BASE
   },
   meta: {
     symbol: [ {
@@ -39,4 +40,4 @@ export default ( {
       [ Lang.DE ]: 'SI-Basiseinheit der Lichtstärke'
     }
   }
-} ) as const satisfies UnitDef< LuminousIntensityDim, typeof candela >;
+} ) as const satisfies UnitDef< LuminousIntensityDim, UnitType.NAMED, typeof candela >;

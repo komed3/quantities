@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, SIType, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { ForceDim } from '../../../../types/dimension';
 
 import { kilo } from '../../../prefix';
@@ -10,6 +10,7 @@ import { second } from '../base/second';
 export const newton = 'N' as UnitRef< ForceDim, 'N' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: newton,
   dim: ForceDim,
   structure: [ {
@@ -34,7 +35,7 @@ export default ( {
       UnitSystem.SI
     ],
     status: UnitStatus.ACTIVE,
-    si: UnitSIType.DERIVED
+    si: SIType.DERIVED
   },
   meta: {
     symbol: [ {
@@ -54,4 +55,4 @@ export default ( {
       [ Lang.DE ]: 'abgeleitete SI-Einheit der Kraft'
     }
   }
-} ) as const satisfies UnitDef< ForceDim, typeof newton >;
+} ) as const satisfies UnitDef< ForceDim, UnitType.NAMED, typeof newton >;

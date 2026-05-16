@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, SIType, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { SolidAngleDim } from '../../../../types/dimension';
 
 import { meter } from '../base/meter';
@@ -7,6 +7,7 @@ import { meter } from '../base/meter';
 export const steradian = 'sr' as UnitRef< SolidAngleDim, 'sr' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: steradian,
   dim: SolidAngleDim,
   structure: [ {
@@ -27,7 +28,7 @@ export default ( {
       UnitSystem.SI
     ],
     status: UnitStatus.ACTIVE,
-    si: UnitSIType.DERIVED
+    si: SIType.DERIVED
   },
   meta: {
     symbol: [ {
@@ -47,4 +48,4 @@ export default ( {
       [ Lang.DE ]: 'SI-Einheit des Raumwinkels, definiert als der Raumwinkel, der im Mittelpunkt einer Kugel mit dem Radius r von einem Teil der Kugeloberfläche mit dem Flächeninhalt r² eingeschlossen wird'
     }
   }
-} ) as const satisfies UnitDef< SolidAngleDim, typeof steradian >;
+} ) as const satisfies UnitDef< SolidAngleDim, UnitType.NAMED, typeof steradian >;
