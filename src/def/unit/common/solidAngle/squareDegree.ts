@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { SolidAngleDim } from '../../../../types/dimension';
 
 import { steradian } from '../../si/derived/steradian';
@@ -7,6 +7,7 @@ import { steradian } from '../../si/derived/steradian';
 export const squareDegree = 'sqDeg' as UnitRef< SolidAngleDim, 'sqDeg' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: squareDegree,
   dim: SolidAngleDim,
   structure: [],
@@ -59,4 +60,4 @@ export default ( {
       [ Lang.DE ]: 'Nicht-SI-Einheit des Raumwinkels, definiert als der Raumwinkel, der von einem Quadrat mit einer Seitenlänge von einem Grad eingeschlossen wird'
     }
   }
-} ) as const satisfies UnitDef< SolidAngleDim, typeof squareDegree >;
+} ) as const satisfies UnitDef< SolidAngleDim, UnitType.NAMED, typeof squareDegree >;
