@@ -25,7 +25,7 @@ export default ( {
         [ Format.LATEX ]: 'f'
       }
     }, {
-      id: 'ν',
+      id: 'nu',
       format: {
         [ Format.PLAIN ]: 'v',
         [ Format.UNICODE ]: 'ν',
