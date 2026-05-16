@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { ElectricCurrentDim } from '../../../../types/dimension';
 
 import { ampere } from '../../si/base/ampere';
@@ -7,6 +7,7 @@ import { ampere } from '../../si/base/ampere';
 export const statampere = 'statA' as UnitRef< ElectricCurrentDim, 'statA' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: statampere,
   dim: ElectricCurrentDim,
   structure: [],
@@ -45,4 +46,4 @@ export default ( {
       [ Lang.DE ]: 'CGS-ESU- / Gaußsche Einheit der Stromstärke'
     }
   }
-} ) as const satisfies UnitDef< ElectricCurrentDim, typeof statampere >;
+} ) as const satisfies UnitDef< ElectricCurrentDim, UnitType.NAMED, typeof statampere >;

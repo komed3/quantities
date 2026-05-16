@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../types/dict';
 import { PressureDim } from '../../../types/dimension';
 
 import { centi } from '../../prefix';
@@ -10,6 +10,7 @@ import { dyne } from './dyne';
 export const barye = 'b' as UnitRef< PressureDim, 'b' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: barye,
   dim: PressureDim,
   structure: [ {
@@ -62,4 +63,4 @@ export default ( {
       [ Lang.DE ]: 'veraltete CGS-Einheit des Drucks, gleich 0,1 Pa'
     }
   }
-} ) as const satisfies UnitDef< PressureDim, typeof barye >;
+} ) as const satisfies UnitDef< PressureDim, UnitType.NAMED, typeof barye >;
