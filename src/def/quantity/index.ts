@@ -17,19 +17,9 @@ import { stress } from './derived/stress';
 
 export default ( [
   // SI base quantities
-  amountOfSubstance,
-  electricCurrent,
-  length,
-  luminousIntensity,
-  mass,
-  temperature,
-  time,
+  amountOfSubstance, electricCurrent, length, luminousIntensity, mass,
+  temperature, time,
 
   // derived quantities
-  angle,
-  force,
-  frequency,
-  pressure,
-  solidAngle,
-  stress
+  angle, force, frequency, pressure, solidAngle, stress
 ] ) as const satisfies QuantityRegistry;
