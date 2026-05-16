@@ -39,7 +39,7 @@ export enum UnitType {
   COMPOUND = 'compound'
 }
 
-export enum UnitSIType {
+export enum SIType {
   BASE = 'base',
   DERIVED = 'derived',
   ACCEPTED = 'accepted'
