@@ -26,9 +26,9 @@ export default ( {
         [ Format.LATEX ]: '\\Omega'
       }
     }, {
-      id: 'w',
+      id: 'omega_lower',
       format: {
-        [ Format.PLAIN ]: 'omega',
+        [ Format.PLAIN ]: 'w',
         [ Format.UNICODE ]: 'ω',
         [ Format.LATEX ]: '\\omega'
       }
