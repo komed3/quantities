@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { PressureDim } from '../../../../types/dimension';
 
 import { pascal } from '../../si/derived/pascal';
@@ -9,6 +9,7 @@ import { inch } from '../length/inch';
 export const poundForcePerSquareInch = 'psi' as UnitRef< PressureDim, 'psi' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: poundForcePerSquareInch,
   dim: PressureDim,
   structure: [ {
@@ -54,4 +55,4 @@ export default ( {
       [ Lang.DE ]: 'imperiale Druck-Einheit, die in den USA häufig zur Angabe von Reifendruck und anderen mechanischen Drücken verwendet wird'
     }
   }
-} ) as const satisfies UnitDef< PressureDim, typeof poundForcePerSquareInch >;
+} ) as const satisfies UnitDef< PressureDim, UnitType.NAMED, typeof poundForcePerSquareInch >;

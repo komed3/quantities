@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { PressureDim } from '../../../../types/dimension';
 
 import { pascal } from '../../si/derived/pascal';
@@ -7,6 +7,7 @@ import { pascal } from '../../si/derived/pascal';
 export const inchMercury = 'inHg' as UnitRef< PressureDim, 'inHg' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: inchMercury,
   dim: PressureDim,
   structure: [],
@@ -53,4 +54,4 @@ export default ( {
       [ Lang.DE ]: 'imperiale Druckeinheit, definiert als der Druck, der von einer Quecksilbersäule von 1 Zoll Höhe bei der Standardbeschleunigung der Schwerkraft ausgeübt wird, ungefähr gleich 3,38639 kPa'
     }
   }
-} ) as const satisfies UnitDef< PressureDim, typeof inchMercury >;
+} ) as const satisfies UnitDef< PressureDim, UnitType.NAMED, typeof inchMercury >;

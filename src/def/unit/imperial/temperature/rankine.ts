@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TemperatureDim } from '../../../../types/dimension';
 
 import { kelvin } from '../../si/base/kelvin';
@@ -7,6 +7,7 @@ import { kelvin } from '../../si/base/kelvin';
 export const rankine = 'degRa' as UnitRef< TemperatureDim, 'degRa' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: rankine,
   dim: TemperatureDim,
   structure: [],
@@ -54,4 +55,4 @@ export default ( {
       [ Lang.DE ]: 'historische Temperatureinheit im imperialen und US-amerikanischen Maßsystem, basierend auf der Fahrenheit-Skala'
     }
   }
-} ) as const satisfies UnitDef< TemperatureDim, typeof rankine >;
+} ) as const satisfies UnitDef< TemperatureDim, UnitType.NAMED, typeof rankine >;

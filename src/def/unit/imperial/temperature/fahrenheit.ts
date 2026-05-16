@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TemperatureDim } from '../../../../types/dimension';
 
 import { kelvin } from '../../si/base/kelvin';
@@ -7,6 +7,7 @@ import { kelvin } from '../../si/base/kelvin';
 export const fahrenheit = 'degF' as UnitRef< TemperatureDim, 'degF' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: fahrenheit,
   dim: TemperatureDim,
   structure: [],
@@ -48,4 +49,4 @@ export default ( {
       [ Lang.DE ]: 'Temperatureinheit im imperialen und US-amerikanischen Maßsystem, definiert als 1/180 des Intervalls zwischen dem Gefrier- und Siedepunkt von Wasser bei Normaldruck, mit einem Offset von 32 Grad zur Celsius-Skala'
     }
   }
-} ) as const satisfies UnitDef< TemperatureDim, typeof fahrenheit >;
+} ) as const satisfies UnitDef< TemperatureDim, UnitType.NAMED, typeof fahrenheit >;

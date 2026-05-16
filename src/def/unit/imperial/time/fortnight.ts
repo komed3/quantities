@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TimeDim } from '../../../../types/dimension';
 
 import { second } from '../../si/base/second';
@@ -7,6 +7,7 @@ import { second } from '../../si/base/second';
 export const fortnight = 'fortnight' as UnitRef< TimeDim, 'fortnight' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: fortnight,
   dim: TimeDim,
   structure: [],
@@ -41,4 +42,4 @@ export default ( {
       [ Lang.DE ]: 'Zeiteinheit, die 14 Tage entspricht, im imperialen System verwendet und früher im Vereinigten Königreich'
     }
   }
-} ) as const satisfies UnitDef< TimeDim, typeof fortnight >;
+} ) as const satisfies UnitDef< TimeDim, UnitType.NAMED, typeof fortnight >;
