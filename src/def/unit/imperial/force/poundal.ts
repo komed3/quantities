@@ -52,7 +52,7 @@ export default ( {
       [ Lang.DE ]: [ 'Poundal' ]
     },
     description: {
-      [ Lang.EN ]: 'imperical unit of force',
+      [ Lang.EN ]: 'imperial unit of force',
       [ Lang.DE ]: 'imperiale Kraft-Einheit'
     }
   }

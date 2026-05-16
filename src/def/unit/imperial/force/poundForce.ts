@@ -41,7 +41,7 @@ export default ( {
       [ Lang.DE ]: [ 'Kraftpfund', 'Kraftpfunde' ]
     },
     description: {
-      [ Lang.EN ]: 'imperical unit of force, used in the US by engineerers',
+      [ Lang.EN ]: 'imperial unit of force, used in the US by engineers',
       [ Lang.DE ]: 'imperiale Kraft-Einheit, die in den USA von Ingenieuren verwendet wird'
     }
   }
