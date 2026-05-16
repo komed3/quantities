@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TimeDim } from '../../../../types/dimension';
 
 import { second } from '../../si/base/second';
@@ -7,6 +7,7 @@ import { second } from '../../si/base/second';
 export const shake = 'shake' as UnitRef< TimeDim, 'shake' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: shake,
   dim: TimeDim,
   structure: [],
@@ -42,4 +43,4 @@ export default ( {
       [ Lang.DE ]: 'historische Zeiteinheit, die in der Kernphysik verwendet wird, entspricht 10 Nanosekunden'
     }
   }
-} ) as const satisfies UnitDef< TimeDim, typeof shake >;
+} ) as const satisfies UnitDef< TimeDim, UnitType.NAMED, typeof shake >;

@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TimeDim } from '../../../../types/dimension';
 
 import { second } from '../../si/base/second';
@@ -7,6 +7,7 @@ import { second } from '../../si/base/second';
 export const week = 'week' as UnitRef< TimeDim, 'week' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: week,
   dim: TimeDim,
   structure: [],
@@ -42,4 +43,4 @@ export default ( {
       [ Lang.DE ]: 'übliche Einheit der Zeit, entspricht 604.800 Sekunden'
     }
   }
-} ) as const satisfies UnitDef< TimeDim, typeof week >;
+} ) as const satisfies UnitDef< TimeDim, UnitType.NAMED, typeof week >;

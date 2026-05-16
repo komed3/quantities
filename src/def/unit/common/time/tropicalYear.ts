@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TimeDim } from '../../../../types/dimension';
 
 import { second } from '../../si/base/second';
@@ -7,6 +7,7 @@ import { second } from '../../si/base/second';
 export const tropicalYear = 'aTrop' as UnitRef< TimeDim, 'aTrop' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: tropicalYear,
   dim: TimeDim,
   structure: [],
@@ -43,4 +44,4 @@ export default ( {
       [ Lang.DE ]: 'übliche Zeiteinheit als ein Zyklus der Jahreszeiten, entspricht 365,24219 Tage'
     }
   }
-} ) as const satisfies UnitDef< TimeDim, typeof tropicalYear >;
+} ) as const satisfies UnitDef< TimeDim, UnitType.NAMED, typeof tropicalYear >;

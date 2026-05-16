@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TimeDim } from '../../../../types/dimension';
 
 import { second } from '../../si/base/second';
@@ -7,6 +7,7 @@ import { second } from '../../si/base/second';
 export const julianYear = 'aJul' as UnitRef< TimeDim, 'aJul' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: julianYear,
   dim: TimeDim,
   structure: [],
@@ -49,4 +50,4 @@ export default ( {
       [ Lang.DE ]: 'historische Einheit der Zeit, entspricht 365,25 Tage'
     }
   }
-} ) as const satisfies UnitDef< TimeDim, typeof julianYear >;
+} ) as const satisfies UnitDef< TimeDim, UnitType.NAMED, typeof julianYear >;

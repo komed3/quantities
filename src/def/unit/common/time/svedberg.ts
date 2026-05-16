@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TimeDim } from '../../../../types/dimension';
 
 import { second } from '../../si/base/second';
@@ -7,6 +7,7 @@ import { second } from '../../si/base/second';
 export const svedberg = 'svedberg' as UnitRef< TimeDim, 'svedberg' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: svedberg,
   dim: TimeDim,
   structure: [],
@@ -48,4 +49,4 @@ export default ( {
       [ Lang.DE ]: 'Einheit der Zeit, die in der Ultrazentrifugation zur Charakterisierung von Sedimentationsraten verwendet wird, entspricht 100 Femtosekunden'
     }
   }
-} ) as const satisfies UnitDef< TimeDim, typeof svedberg >;
+} ) as const satisfies UnitDef< TimeDim, UnitType.NAMED, typeof svedberg >;

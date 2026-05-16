@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, SIType, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TimeDim } from '../../../../types/dimension';
 
 import { second } from '../../si/base/second';
@@ -7,6 +7,7 @@ import { second } from '../../si/base/second';
 export const minute = 'min' as UnitRef< TimeDim, 'min' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: minute,
   dim: TimeDim,
   structure: [],
@@ -24,7 +25,7 @@ export default ( {
       UnitSystem.COMMON
     ],
     status: UnitStatus.ACTIVE,
-    si: UnitSIType.ACCEPTED
+    si: SIType.ACCEPTED
   },
   meta: {
     symbol: [ {
@@ -44,4 +45,4 @@ export default ( {
       [ Lang.DE ]: 'SI zugelassene Einheit der Zeit, entspricht 60 Sekunden'
     }
   }
-} ) as const satisfies UnitDef< TimeDim, typeof minute >;
+} ) as const satisfies UnitDef< TimeDim, UnitType.NAMED, typeof minute >;
