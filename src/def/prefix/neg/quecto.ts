@@ -1,12 +1,12 @@
 import type { PrefixDef, PrefixRef } from '../../../types/def/prefix';
 import { Format, Lang } from '../../../types/dict';
 
-export const quekto = 'q' as PrefixRef< 'q' >;
+export const quecto = 'q' as PrefixRef< 'q' >;
 
 export default ( {
-  id: quekto,
+  id: quecto,
   factor: 1e-30,
-  aliases: [ 'quekto' ],
+  aliases: [ 'quecto' ],
   meta: {
     symbol: [ {
       id: 'q',
@@ -17,7 +17,7 @@ export default ( {
       }
     } ],
     name: {
-      [ Lang.EN ]: 'quekto',
+      [ Lang.EN ]: 'quecto',
       [ Lang.DE ]: 'Quekto'
     },
     description: {
@@ -25,4 +25,4 @@ export default ( {
       [ Lang.DE ]: 'Einheitenpräfix mit dem Faktor 1e-30'
     }
   }
-} ) as const satisfies PrefixDef< typeof quekto >;
+} ) as const satisfies PrefixDef< typeof quecto >;

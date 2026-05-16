@@ -21,17 +21,17 @@ import { micro } from './neg/micro';
 import { milli } from './neg/milli';
 import { nano } from './neg/nano';
 import { pico } from './neg/pico';
-import { quekto } from './neg/quekto';
+import { quecto } from './neg/quecto';
 import { ronto } from './neg/ronto';
 import { yocto } from './neg/yocto';
 import { zepto } from './neg/zepto';
 
 export {
   atto, centi, deca, deci, exa, femto, giga, hecto, kilo, mega, micro, milli,
-  nano, peta, pico, quekto, quetta, ronna, ronto, tera, yocto, yotta, zepto, zetta
+  nano, peta, pico, quecto, quetta, ronna, ronto, tera, yocto, yotta, zepto, zetta
 };
 
 export default ( [
   quetta, ronna, yotta, zetta, exa, peta, tera, giga, mega, kilo, hecto, deca,
-  deci, centi, milli, micro, nano, pico, femto, atto, zepto, yocto, ronto, quekto
+  deci, centi, milli, micro, nano, pico, femto, atto, zepto, yocto, ronto, quecto
 ] ) as const satisfies PrefixRegistry;
