@@ -1,3 +1,7 @@
 import type { ConstRegistry } from '../../types/def/registry';
 
-export default ( [] ) as const satisfies ConstRegistry;
+import { gravitationalConst } from './gravitationalConst';
+
+export default ( [
+  gravitationalConst
+] ) as const satisfies ConstRegistry;
