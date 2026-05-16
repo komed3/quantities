@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { ForceDim } from '../../../../types/dimension';
 
 import { poundForce } from '../../imperial/force/poundForce';
@@ -7,6 +7,7 @@ import { poundForce } from '../../imperial/force/poundForce';
 export const kilopound = 'kip' as UnitRef< ForceDim, 'kip' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: kilopound,
   dim: ForceDim,
   structure: [],
@@ -45,4 +46,4 @@ export default ( {
       [ Lang.DE ]: 'in den USA verwendete Kraft-Einheit, gleich 1000 Kraftpfunde'
     }
   }
-} ) as const satisfies UnitDef< ForceDim, typeof kilopound >;
+} ) as const satisfies UnitDef< ForceDim, UnitType.NAMED, typeof kilopound >;

@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { MassDim } from '../../../../types/dimension';
 
 import { gram } from '../../si/base/gram';
@@ -7,6 +7,7 @@ import { gram } from '../../si/base/gram';
 export const shortTon = 'tn' as UnitRef< MassDim, 'tn' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: shortTon,
   dim: MassDim,
   structure: [],
@@ -50,4 +51,4 @@ export default ( {
       [ Lang.DE ]: 'amerikanische Masseeinheit, die 2.000 Pfund (etwa 907,18474 kg) entspricht'
     }
   }
-} ) as const satisfies UnitDef< MassDim, typeof shortTon >;
+} ) as const satisfies UnitDef< MassDim, UnitType.NAMED, typeof shortTon >;
