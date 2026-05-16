@@ -42,6 +42,12 @@ export default ( {
         [ Format.PLAIN ]: 'p',
         [ Format.LATEX ]: 'p'
       }
+    }, {
+      id: 'P',
+      format: {
+        [ Format.PLAIN ]: 'P',
+        [ Format.LATEX ]: 'P'
+      }
     } ],
     name: {
       [ Lang.EN ]: 'pressure',

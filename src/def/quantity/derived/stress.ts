@@ -20,12 +20,19 @@ export default ( {
   branch: Branch.MECHANICS,
   meta: {
     symbol: [ {
-      id: 'o',
+      id: 'sigma',
       canonical: true,
       format: {
-        [ Format.PLAIN ]: 'o',
+        [ Format.PLAIN ]: 'sigma',
         [ Format.UNICODE ]: 'σ',
         [ Format.LATEX ]: '\\sigma'
+      }
+    }, {
+      id: 'tau',
+      format: {
+        [ Format.PLAIN ]: 't',
+        [ Format.UNICODE ]: 'τ',
+        [ Format.LATEX ]: '\\tau'
       }
     } ],
     name: {
