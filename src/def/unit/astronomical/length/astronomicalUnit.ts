@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, SIType, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { LengthDim } from '../../../../types/dimension';
 
 import { meter } from '../../si/base/meter';
@@ -7,6 +7,7 @@ import { meter } from '../../si/base/meter';
 export const astronomicalUnit = 'au' as UnitRef< LengthDim, 'au' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: astronomicalUnit,
   dim: LengthDim,
   structure: [],
@@ -25,7 +26,7 @@ export default ( {
       UnitSystem.ASTRO
     ],
     status: UnitStatus.ACTIVE,
-    si: UnitSIType.ACCEPTED
+    si: SIType.ACCEPTED
   },
   meta: {
     symbol: [ {
@@ -60,4 +61,4 @@ export default ( {
       [ Lang.DE ]: 'astronomische Längeneinheit, die der durchschnittlichen Entfernung zwischen Erde und Sonne entspricht'
     }
   }
-} ) as const satisfies UnitDef< LengthDim, typeof astronomicalUnit >;
+} ) as const satisfies UnitDef< LengthDim, UnitType.NAMED, typeof astronomicalUnit >;

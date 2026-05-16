@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { LengthDim } from '../../../../types/dimension';
 
 import { meter } from '../../si/base/meter';
@@ -7,6 +7,7 @@ import { meter } from '../../si/base/meter';
 export const solarRadius = 'rSolar' as UnitRef< LengthDim, 'rSolar' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: solarRadius,
   dim: LengthDim,
   structure: [],
@@ -49,4 +50,4 @@ export default ( {
       [ Lang.DE ]: 'astronomische Längeneinheit, definiert als der Radius der Sonne zu einem bestimmten Zeitpunkt, verwendet als Standardmaßeinheit in der Astronomie'
     }
   }
-} ) as const satisfies UnitDef< LengthDim, typeof solarRadius >;
+} ) as const satisfies UnitDef< LengthDim, UnitType.NAMED, typeof solarRadius >;

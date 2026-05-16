@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { MassDim } from '../../../../types/dimension';
 
 import { gram } from '../../si/base/gram';
@@ -7,6 +7,7 @@ import { gram } from '../../si/base/gram';
 export const solarMass = 'mSolar' as UnitRef< MassDim, 'mSolar' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: solarMass,
   dim: MassDim,
   structure: [],
@@ -46,4 +47,4 @@ export default ( {
       [ Lang.DE ]: 'astronomische Masseneinheit, definiert als die Masse der Sonne, verwendet als Standardmaßeinheit in der Astronomie'
     }
   }
-} ) as const satisfies UnitDef< MassDim, typeof solarMass >;
+} ) as const satisfies UnitDef< MassDim, UnitType.NAMED, typeof solarMass >;

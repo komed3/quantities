@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TimeDim } from '../../../../types/dimension';
 
 import { second } from '../../si/base/second';
@@ -7,6 +7,7 @@ import { second } from '../../si/base/second';
 export const galacticYear = 'gal' as UnitRef< TimeDim, 'gal' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: galacticYear,
   dim: TimeDim,
   structure: [],
@@ -54,4 +55,4 @@ export default ( {
       [ Lang.DE ]: 'astronomische Einheit der Zeit, ensprechend der Dauer einer vollständigen Umrundung der Sonne um das Zentrum der Milchstraße'
     }
   }
-} ) as const satisfies UnitDef< TimeDim, typeof galacticYear >;
+} ) as const satisfies UnitDef< TimeDim, UnitType.NAMED, typeof galacticYear >;

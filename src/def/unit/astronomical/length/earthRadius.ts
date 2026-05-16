@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { LengthDim } from '../../../../types/dimension';
 
 import { meter } from '../../si/base/meter';
@@ -7,6 +7,7 @@ import { meter } from '../../si/base/meter';
 export const earthRadius = 'rEarth' as UnitRef< LengthDim, 'rEarth' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: earthRadius,
   dim: LengthDim,
   structure: [],
@@ -53,4 +54,4 @@ export default ( {
       [ Lang.DE ]: 'astronomische Längeneinheit, definiert als der Radius der Erde am Äquator, verwendet als Standardmaßeinheit in der Astronomie'
     }
   }
-} ) as const satisfies UnitDef< LengthDim, typeof earthRadius >;
+} ) as const satisfies UnitDef< LengthDim, UnitType.NAMED, typeof earthRadius >;

@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { LengthDim } from '../../../../types/dimension';
 
 import { astronomicalUnit } from './astronomicalUnit';
@@ -7,6 +7,7 @@ import { astronomicalUnit } from './astronomicalUnit';
 export const parsec = 'pc' as UnitRef< LengthDim, 'pc' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: parsec,
   dim: LengthDim,
   structure: [],
@@ -43,4 +44,4 @@ export default ( {
       [ Lang.DE ]: 'astronomische Längeneinheit, definiert als die Entfernung, bei der eine Astronomische Einheit einen Winkel von einer Bogensekunde unterspannt'
     }
   }
-} ) as const satisfies UnitDef< LengthDim, typeof parsec >;
+} ) as const satisfies UnitDef< LengthDim, UnitType.NAMED, typeof parsec >;

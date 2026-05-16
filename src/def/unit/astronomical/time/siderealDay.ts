@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { TimeDim } from '../../../../types/dimension';
 
 import { second } from '../../si/base/second';
@@ -7,6 +7,7 @@ import { second } from '../../si/base/second';
 export const siderealDay = 'dSid' as UnitRef< TimeDim, 'dSid' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: siderealDay,
   dim: TimeDim,
   structure: [],
@@ -45,4 +46,4 @@ export default ( {
       [ Lang.DE ]: 'astronomische Einheit der Zeit, Zeit einer Erdrotation um die eigene Achse'
     }
   }
-} ) as const satisfies UnitDef< TimeDim, typeof siderealDay >;
+} ) as const satisfies UnitDef< TimeDim, UnitType.NAMED, typeof siderealDay >;

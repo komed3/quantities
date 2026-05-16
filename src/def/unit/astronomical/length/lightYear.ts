@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { LengthDim } from '../../../../types/dimension';
 
 import { meter } from '../../si/base/meter';
@@ -7,6 +7,7 @@ import { meter } from '../../si/base/meter';
 export const lightYear = 'ly' as UnitRef< LengthDim, 'ly' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: lightYear,
   dim: LengthDim,
   structure: [],
@@ -59,4 +60,4 @@ export default ( {
       [ Lang.DE ]: 'astronomische Längeneinheit, die der Entfernung entspricht, die Licht in einem Vakuum in einem julianischen Jahr (365,25 Tage) zurücklegt'
     }
   }
-} ) as const satisfies UnitDef< LengthDim, typeof lightYear >;
+} ) as const satisfies UnitDef< LengthDim, UnitType.NAMED, typeof lightYear >;
