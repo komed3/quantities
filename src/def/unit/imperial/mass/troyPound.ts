@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { MassDim } from '../../../../types/dimension';
 
 import { gram } from '../../si/base/gram';
@@ -7,6 +7,7 @@ import { gram } from '../../si/base/gram';
 export const troyPound = 'lbT' as UnitRef< MassDim, 'lbT' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: troyPound,
   dim: MassDim,
   structure: [],
@@ -46,4 +47,4 @@ export default ( {
       [ Lang.DE ]: 'imperiale Masseeinheit im Troy-System, gleich 12 Troy-Unzen'
     }
   }
-} ) as const satisfies UnitDef< MassDim, typeof troyPound >;
+} ) as const satisfies UnitDef< MassDim, UnitType.NAMED, typeof troyPound >;

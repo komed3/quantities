@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { MassDim } from '../../../../types/dimension';
 
 import { gram } from '../../si/base/gram';
@@ -7,6 +7,7 @@ import { gram } from '../../si/base/gram';
 export const dram = 'dr' as UnitRef< MassDim, 'dr' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: dram,
   dim: MassDim,
   structure: [],
@@ -50,4 +51,4 @@ export default ( {
       [ Lang.DE ]: 'imperiale Masseeinheit, gleich 1/16 Unze oder 1/256 Pfund'
     }
   }
-} ) as const satisfies UnitDef< MassDim, typeof dram >;
+} ) as const satisfies UnitDef< MassDim, UnitType.NAMED, typeof dram >;

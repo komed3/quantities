@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { MassDim } from '../../../../types/dimension';
 
 import { gram } from '../../si/base/gram';
@@ -7,6 +7,7 @@ import { gram } from '../../si/base/gram';
 export const longTon = 'LT' as UnitRef< MassDim, 'LT' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: longTon,
   dim: MassDim,
   structure: [],
@@ -50,4 +51,4 @@ export default ( {
       [ Lang.DE ]: 'imperiale Masseeinheit, die 2.240 Pfund (etwa 1.016,046908 kg) entspricht'
     }
   }
-} ) as const satisfies UnitDef< MassDim, typeof longTon >;
+} ) as const satisfies UnitDef< MassDim, UnitType.NAMED, typeof longTon >;

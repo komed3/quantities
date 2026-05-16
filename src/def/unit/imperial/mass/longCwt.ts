@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { MassDim } from '../../../../types/dimension';
 
 import { gram } from '../../si/base/gram';
@@ -7,6 +7,7 @@ import { gram } from '../../si/base/gram';
 export const longCwt = 'cwtL' as UnitRef< MassDim, 'cwtL' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: longCwt,
   dim: MassDim,
   structure: [],
@@ -44,4 +45,4 @@ export default ( {
       [ Lang.DE ]: 'imperiale Masseeinheit, die 112 Pfund (etwa 50,80234544 kg) entspricht'
     }
   }
-} ) as const satisfies UnitDef< MassDim, typeof longCwt >;
+} ) as const satisfies UnitDef< MassDim, UnitType.NAMED, typeof longCwt >;
