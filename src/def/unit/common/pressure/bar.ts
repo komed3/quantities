@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { PressureDim } from '../../../../types/dimension';
 
 import { pascal } from '../../si/derived/pascal';
@@ -7,6 +7,7 @@ import { pascal } from '../../si/derived/pascal';
 export const bar = 'bar' as UnitRef< PressureDim, 'bar' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: bar,
   dim: PressureDim,
   structure: [],
@@ -42,4 +43,4 @@ export default ( {
       [ Lang.DE ]: 'häufig verwendete Druckeinheit, definiert als 100.000 Pa'
     }
   }
-} ) as const satisfies UnitDef< PressureDim, typeof bar >;
+} ) as const satisfies UnitDef< PressureDim, UnitType.NAMED, typeof bar >;

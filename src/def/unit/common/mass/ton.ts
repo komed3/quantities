@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, SIType, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { MassDim } from '../../../../types/dimension';
 
 import { gram } from '../../si/base/gram';
@@ -7,6 +7,7 @@ import { gram } from '../../si/base/gram';
 export const ton = 't' as UnitRef< MassDim, 't' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: ton,
   dim: MassDim,
   structure: [],
@@ -26,7 +27,7 @@ export default ( {
       UnitSystem.COMMON
     ],
     status: UnitStatus.ACTIVE,
-    si: UnitSIType.ACCEPTED
+    si: SIType.ACCEPTED
   },
   meta: {
     symbol: [ {
@@ -46,4 +47,4 @@ export default ( {
       [ Lang.DE ]: 'akzeptierte metrische Masseneinheit, die 1.000 kg entspricht'
     }
   }
-} ) as const satisfies UnitDef< MassDim, typeof ton >;
+} ) as const satisfies UnitDef< MassDim, UnitType.NAMED, typeof ton >;

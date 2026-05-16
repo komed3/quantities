@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { PressureDim } from '../../../../types/dimension';
 
 import { pascal } from '../../si/derived/pascal';
@@ -7,6 +7,7 @@ import { pascal } from '../../si/derived/pascal';
 export const standardAtmosphere = 'atm' as UnitRef< PressureDim, 'atm' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: standardAtmosphere,
   dim: PressureDim,
   structure: [],
@@ -48,4 +49,4 @@ export default ( {
       [ Lang.DE ]: 'veraltete Druckeinheit, definiert als 101325 Pa, ungefähr gleich dem durchschnittlichen atmosphärischen Druck auf Meereshöhe auf der Erde'
     }
   }
-} ) as const satisfies UnitDef< PressureDim, typeof standardAtmosphere >;
+} ) as const satisfies UnitDef< PressureDim, UnitType.NAMED, typeof standardAtmosphere >;

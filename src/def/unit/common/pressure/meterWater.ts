@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { PressureDim } from '../../../../types/dimension';
 
 import { pascal } from '../../si/derived/pascal';
@@ -7,6 +7,7 @@ import { pascal } from '../../si/derived/pascal';
 export const meterWater = 'mH2O' as UnitRef< PressureDim, 'mH2O' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: meterWater,
   dim: PressureDim,
   structure: [],
@@ -54,4 +55,4 @@ export default ( {
       [ Lang.DE ]: 'historische Druckeinheit, definiert als der Druck, der von einer Wassersäule einer bestimmten Höhe ausgeübt wird, gleich 133,322 Pa'
     }
   }
-} ) as const satisfies UnitDef< PressureDim, typeof meterWater >;
+} ) as const satisfies UnitDef< PressureDim, UnitType.NAMED, typeof meterWater >;

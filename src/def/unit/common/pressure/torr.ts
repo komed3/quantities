@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { PressureDim } from '../../../../types/dimension';
 
 import { pascal } from '../../si/derived/pascal';
@@ -7,6 +7,7 @@ import { pascal } from '../../si/derived/pascal';
 export const torr = 'Torr' as UnitRef< PressureDim, 'Torr' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: torr,
   dim: PressureDim,
   structure: [],
@@ -46,4 +47,4 @@ export default ( {
       [ Lang.DE ]: 'veraltete Druckeinheit, definiert als 1/760 eines Standardatmosphäre, ungefähr gleich 133,322 Pa'
     }
   }
-} ) as const satisfies UnitDef< PressureDim, typeof torr >;
+} ) as const satisfies UnitDef< PressureDim, UnitType.NAMED, typeof torr >;

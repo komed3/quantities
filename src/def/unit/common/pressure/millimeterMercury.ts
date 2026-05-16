@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { PressureDim } from '../../../../types/dimension';
 
 import { pascal } from '../../si/derived/pascal';
@@ -7,6 +7,7 @@ import { pascal } from '../../si/derived/pascal';
 export const millimeterMercury = 'mmHg' as UnitRef< PressureDim, 'mmHg' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: millimeterMercury,
   dim: PressureDim,
   structure: [],
@@ -50,4 +51,4 @@ export default ( {
       [ Lang.DE ]: 'historische Druckeinheit, definiert als der Druck, der von einer Quecksilbersäule von 1 Millimeter Höhe bei der Standardbeschleunigung der Schwerkraft ausgeübt wird, ungefähr gleich 133,322 Pa'
     }
   }
-} ) as const satisfies UnitDef< PressureDim, typeof millimeterMercury >;
+} ) as const satisfies UnitDef< PressureDim, UnitType.NAMED, typeof millimeterMercury >;

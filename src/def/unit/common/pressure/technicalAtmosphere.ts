@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { PressureDim } from '../../../../types/dimension';
 
 import { centi } from '../../../prefix';
@@ -10,6 +10,7 @@ import { kilopond } from '../force/kilopond';
 export const technicalAtmosphere = 'at' as UnitRef< PressureDim, 'at' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: technicalAtmosphere,
   dim: PressureDim,
   structure: [ {
@@ -62,4 +63,4 @@ export default ( {
       [ Lang.DE ]: 'veraltete Druckeinheit, definiert als der Druck, der durch eine Kraft von einem Kilogramm-Kraft auf eine Fläche von einem Quadratzentimeter ausgeübt wird'
     }
   }
-} ) as const satisfies UnitDef< PressureDim, typeof technicalAtmosphere >;
+} ) as const satisfies UnitDef< PressureDim, UnitType.NAMED, typeof technicalAtmosphere >;
