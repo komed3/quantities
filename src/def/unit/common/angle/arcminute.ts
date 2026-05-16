@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, SIType, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { AngleDim } from '../../../../types/dimension';
 
 import { degree } from './degree';
@@ -7,6 +7,7 @@ import { degree } from './degree';
 export const arcminute = 'arcmin' as UnitRef< AngleDim, 'arcmin' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: arcminute,
   dim: AngleDim,
   structure: [],
@@ -32,7 +33,7 @@ export default ( {
       UnitSystem.COMMON
     ],
     status: UnitStatus.ACTIVE,
-    si: UnitSIType.ACCEPTED
+    si: SIType.ACCEPTED
   },
   meta: {
     symbol: [ {
@@ -60,4 +61,4 @@ export default ( {
       [ Lang.DE ]: 'Winkeleinheit, definiert als 1/60 eines Grades'
     }
   }
-} ) as const satisfies UnitDef< AngleDim, typeof arcminute >;
+} ) as const satisfies UnitDef< AngleDim, UnitType.NAMED, typeof arcminute >;

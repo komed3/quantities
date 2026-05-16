@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, SIType, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { AngleDim } from '../../../../types/dimension';
 
 import { arcminute } from './arcminute';
@@ -7,6 +7,7 @@ import { arcminute } from './arcminute';
 export const arcsecond = 'arcsec' as UnitRef< AngleDim, 'arcsec' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: arcsecond,
   dim: AngleDim,
   structure: [],
@@ -32,7 +33,7 @@ export default ( {
       UnitSystem.COMMON
     ],
     status: UnitStatus.ACTIVE,
-    si: UnitSIType.ACCEPTED
+    si: SIType.ACCEPTED
   },
   meta: {
     symbol: [ {
@@ -60,4 +61,4 @@ export default ( {
       [ Lang.DE ]: 'Winkeleinheit, definiert als 1/60 einer Bogenminute'
     }
   }
-} ) as const satisfies UnitDef< AngleDim, typeof arcsecond >;
+} ) as const satisfies UnitDef< AngleDim, UnitType.NAMED, typeof arcsecond >;

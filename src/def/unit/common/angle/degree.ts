@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitSIType, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, SIType, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { AngleDim } from '../../../../types/dimension';
 
 import { radian } from '../../si/derived/radian';
@@ -7,6 +7,7 @@ import { radian } from '../../si/derived/radian';
 export const degree = 'deg' as UnitRef< AngleDim, 'deg' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: degree,
   dim: AngleDim,
   structure: [],
@@ -25,7 +26,7 @@ export default ( {
       UnitSystem.COMMON
     ],
     status: UnitStatus.ACTIVE,
-    si: UnitSIType.ACCEPTED
+    si: SIType.ACCEPTED
   },
   meta: {
     symbol: [ {
@@ -46,4 +47,4 @@ export default ( {
       [ Lang.DE ]: 'gebräuchliche Winkeleinheit, definiert als 1/360 einer vollen Umdrehung'
     }
   }
-} ) as const satisfies UnitDef< AngleDim, typeof degree >;
+} ) as const satisfies UnitDef< AngleDim, UnitType.NAMED, typeof degree >;

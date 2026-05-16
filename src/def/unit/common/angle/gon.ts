@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { AngleDim } from '../../../../types/dimension';
 
 import { radian } from '../../si/derived/radian';
@@ -7,6 +7,7 @@ import { radian } from '../../si/derived/radian';
 export const gon = 'gon' as UnitRef< AngleDim, 'gon' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: gon,
   dim: AngleDim,
   structure: [],
@@ -52,4 +53,4 @@ export default ( {
       [ Lang.DE ]: 'Winkeleinheit, definiert als 1/400 einer vollen Umdrehung'
     }
   }
-} ) as const satisfies UnitDef< AngleDim, typeof gon >;
+} ) as const satisfies UnitDef< AngleDim, UnitType.NAMED, typeof gon >;
