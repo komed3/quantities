@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { LengthDim } from '../../../../types/dimension';
 
 import { meter } from '../../si/base/meter';
@@ -7,6 +7,7 @@ import { meter } from '../../si/base/meter';
 export const nauticalMile = 'nmi' as UnitRef< LengthDim, 'nmi' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: nauticalMile,
   dim: LengthDim,
   structure: [],
@@ -73,4 +74,4 @@ export default ( {
       [ Lang.DE ]: 'nautische Längeneinheit, die 1.852 Meter oder ungefähr 1,15078 Meilen entspricht'
     }
   }
-} ) as const satisfies UnitDef< LengthDim, typeof nauticalMile >;
+} ) as const satisfies UnitDef< LengthDim, UnitType.NAMED, typeof nauticalMile >;

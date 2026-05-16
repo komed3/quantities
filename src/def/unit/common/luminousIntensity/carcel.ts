@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { LuminousIntensityDim } from '../../../../types/dimension';
 
 import { candela } from '../../si/base/candela';
@@ -7,6 +7,7 @@ import { candela } from '../../si/base/candela';
 export const carcel = 'carcel' as UnitRef< LuminousIntensityDim, 'carcel' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: carcel,
   dim: LuminousIntensityDim,
   structure: [],
@@ -43,4 +44,4 @@ export default ( {
       [ Lang.DE ]: 'historische Lichtstärkeeineinheit, die im 19. Jahrhundert verwendet wurde und ca. 9,74 Candela entspricht'
     }
   }
-} ) as const satisfies UnitDef< LuminousIntensityDim, typeof carcel >;
+} ) as const satisfies UnitDef< LuminousIntensityDim, UnitType.NAMED, typeof carcel >;

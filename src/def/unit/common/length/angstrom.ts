@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { LengthDim } from '../../../../types/dimension';
 
 import { meter } from '../../si/base/meter';
@@ -7,6 +7,7 @@ import { meter } from '../../si/base/meter';
 export const angstrom = 'angstrom' as UnitRef< LengthDim, 'angstrom' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: angstrom,
   dim: LengthDim,
   structure: [],
@@ -44,4 +45,4 @@ export default ( {
       [ Lang.DE ]: 'historische Längeneinheit, die einem Zehnmilliardstel Meter entspricht und hauptsächlich zur Angabe von Lichtwellenlängen und interatomaren Abständen verwendet wird'
     }
   }
-} ) as const satisfies UnitDef< LengthDim, typeof angstrom >;
+} ) as const satisfies UnitDef< LengthDim, UnitType.NAMED, typeof angstrom >;

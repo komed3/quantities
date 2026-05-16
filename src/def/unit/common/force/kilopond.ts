@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { ForceDim } from '../../../../types/dimension';
 
 import { newton } from '../../si/derived/newton';
@@ -7,6 +7,7 @@ import { newton } from '../../si/derived/newton';
 export const kilopond = 'kp' as UnitRef< ForceDim, 'kp' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: kilopond,
   dim: ForceDim,
   structure: [],
@@ -54,4 +55,4 @@ export default ( {
       [ Lang.DE ]: 'veraltete Kraft-Einheit, gleich der Kraft, die von einem Kilogramm Masse in der Standard-Erdbeschleunigung ausgeübt wird'
     }
   }
-} ) as const satisfies UnitDef< ForceDim, typeof kilopond >;
+} ) as const satisfies UnitDef< ForceDim, UnitType.NAMED, typeof kilopond >;
