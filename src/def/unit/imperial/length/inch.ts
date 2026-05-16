@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { LengthDim } from '../../../../types/dimension';
 
 import { meter } from '../../si/base/meter';
@@ -7,6 +7,7 @@ import { meter } from '../../si/base/meter';
 export const inch = 'in' as UnitRef< LengthDim, 'in' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: inch,
   dim: LengthDim,
   structure: [],
@@ -51,4 +52,4 @@ export default ( {
       [ Lang.DE ]: 'imperiale Längeneinheit, die 0,0254 Meter entspricht'
     }
   }
-} ) as const satisfies UnitDef< LengthDim, typeof inch >;
+} ) as const satisfies UnitDef< LengthDim, UnitType.NAMED, typeof inch >;

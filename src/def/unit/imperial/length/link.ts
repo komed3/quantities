@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { LengthDim } from '../../../../types/dimension';
 
 import { meter } from '../../si/base/meter';
@@ -7,6 +7,7 @@ import { meter } from '../../si/base/meter';
 export const link = 'link' as UnitRef< LengthDim, 'link' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: link,
   dim: LengthDim,
   structure: [],
@@ -58,4 +59,4 @@ export default ( {
       [ Lang.DE ]: 'imperiale Längeneinheit, definiert als 1/100 einer Kette'
     }
   }
-} ) as const satisfies UnitDef< LengthDim, typeof link >;
+} ) as const satisfies UnitDef< LengthDim, UnitType.NAMED, typeof link >;

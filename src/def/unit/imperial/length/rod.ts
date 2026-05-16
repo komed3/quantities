@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { LengthDim } from '../../../../types/dimension';
 
 import { meter } from '../../si/base/meter';
@@ -7,6 +7,7 @@ import { meter } from '../../si/base/meter';
 export const rod = 'rod' as UnitRef< LengthDim, 'rod' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: rod,
   dim: LengthDim,
   structure: [],
@@ -50,4 +51,4 @@ export default ( {
       [ Lang.DE ]: 'imperiale Längeneinheit, die 5,0292 Meter oder 16,5 Fuß entspricht'
     }
   }
-} ) as const satisfies UnitDef< LengthDim, typeof rod >;
+} ) as const satisfies UnitDef< LengthDim, UnitType.NAMED, typeof rod >;

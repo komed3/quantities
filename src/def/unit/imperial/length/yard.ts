@@ -1,5 +1,5 @@
 import type { UnitDef, UnitRef } from '../../../../types/def/unit';
-import { Format, Lang, UnitStatus, UnitSystem } from '../../../../types/dict';
+import { Format, Lang, UnitStatus, UnitSystem, UnitType } from '../../../../types/dict';
 import { LengthDim } from '../../../../types/dimension';
 
 import { meter } from '../../si/base/meter';
@@ -7,6 +7,7 @@ import { meter } from '../../si/base/meter';
 export const yard = 'yd' as UnitRef< LengthDim, 'yd' >;
 
 export default ( {
+  type: UnitType.NAMED,
   id: yard,
   dim: LengthDim,
   structure: [],
@@ -44,4 +45,4 @@ export default ( {
       [ Lang.DE ]: 'imperiale Längeneinheit, die 3 Fuß oder 0,9144 Meter entspricht'
     }
   }
-} ) as const satisfies UnitDef< LengthDim, typeof yard >;
+} ) as const satisfies UnitDef< LengthDim, UnitType.NAMED, typeof yard >;
