@@ -9,7 +9,7 @@ export default ( {
   dim: LuminousIntensityDim,
   structure: [],
   conversion: 1,
-  prefixable: false,
+  prefixable: true,
   aliases: [
     'candela',
     'candelas'

@@ -9,7 +9,7 @@ export default ( {
   dim: TemperatureDim,
   structure: [],
   conversion: 1,
-  prefixable: false,
+  prefixable: true,
   aliases: [
     'kelvin',
     'kelvins'
