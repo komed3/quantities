@@ -52,3 +52,6 @@ export type PressureDim = typeof PressureDim;
 
 export const StressDim = PressureDim;
 export type StressDim = typeof StressDim;
+
+export const EnergyDim = [ -2, 2, 1, 0, 0, 0, 0 ] as const satisfies Dimension;
+export type EnergyDim = typeof EnergyDim;
