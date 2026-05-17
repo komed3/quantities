@@ -1,6 +1,8 @@
 import type { QuantityDef, QuantityRef } from '../../../types/def/quantity';
 import { Branch, Format, Lang } from '../../../types/dict';
 import { EnergyDim } from '../../../types/dimension';
+
+import { erg } from '../../unit/cgs/erg';
 import { joule } from '../../unit/si/derived/joule';
 
 export const energy = 'energy' as QuantityRef< EnergyDim >;
@@ -9,6 +11,7 @@ export default ( {
   id: energy,
   dim: EnergyDim,
   units: [
+    erg,
     joule
   ],
   baseUnit: joule,

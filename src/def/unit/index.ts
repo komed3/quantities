@@ -35,6 +35,7 @@ import { siderealYear } from './astronomical/time/siderealYear';
 // CGS
 import { barye } from './cgs/barye';
 import { dyne } from './cgs/dyne';
+import { erg } from './cgs/erg';
 import { biot } from './cgs/emu/biot';
 import { statampere } from './cgs/esu/statampere';
 
@@ -144,7 +145,7 @@ export default ( [
   siderealYear, solarMass, solarRadius,
 
   // CGS
-  barye, biot, dyne, statampere,
+  barye, biot, dyne, erg, statampere,
 
   // Common
   angstrom, arcminute, arcsecond, bar, cable, carat, carcel, celsius,
