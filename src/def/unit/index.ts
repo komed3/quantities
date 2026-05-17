@@ -11,6 +11,7 @@ import { second } from './si/base/second';
 
 // SI Derived
 import { hertz } from './si/derived/hertz';
+import { joule } from './si/derived/joule';
 import { newton } from './si/derived/newton';
 import { pascal } from './si/derived/pascal';
 import { radian } from './si/derived/radian';
@@ -135,7 +136,7 @@ export default ( [
   ampere, candela, gram, kelvin, meter, mole, second,
 
   // SI Derived
-  hertz, newton, pascal, radian, steradian,
+  hertz, joule, newton, pascal, radian, steradian,
 
   // Astronomical
   astronomicalUnit, earthMass, earthRadius, galacticYear, lightSecond,
