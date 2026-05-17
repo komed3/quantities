@@ -9,6 +9,7 @@ import { temperature } from './base/temperature';
 import { time } from './base/time';
 
 import { angle } from './derived/angle';
+import { energy } from './derived/energy';
 import { force } from './derived/force';
 import { frequency } from './derived/frequency';
 import { pressure } from './derived/pressure';
@@ -21,5 +22,5 @@ export default ( [
   temperature, time,
 
   // derived quantities
-  angle, force, frequency, pressure, solidAngle, stress
+  angle, energy, force, frequency, pressure, solidAngle, stress
 ] ) as const satisfies QuantityRegistry;
